@@ -212,7 +212,7 @@ nav.scrolled {
 
 .mobile-menu {
   display: none;
-  position: fixed; inset: 0; top: 0; z-index: 99;
+  position: fixed; inset: 0; z-index: 99;
   background: var(--cream);
   flex-direction: column; align-items: center; justify-content: center;
   gap: 2.5rem;
@@ -384,7 +384,7 @@ nav.scrolled {
   width: 38px; height: 38px;
   background: var(--cream); border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  flex-shrink: 0; color: var(--navy);
 }
 .trust-item strong { color: var(--navy); display: block; font-size: 1rem; }
 .trust-sep { width: 1px; height: 36px; background: var(--border); flex-shrink: 0; }
@@ -461,110 +461,10 @@ nav.scrolled {
   width: 38px; height: 38px; background: var(--cream);
   border-radius: var(--radius-sm); display: flex;
   align-items: center; justify-content: center;
-  flex-shrink: 0; font-size: 1.1rem;
+  flex-shrink: 0; color: var(--navy);
 }
 .solution-item strong { display: block; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.15rem; }
 .solution-item span { font-size: 0.8rem; color: var(--text-mid); }
-
-/* ── REFERENZ ── */
-.referenz { background: var(--white); }
-.referenz-inner { max-width: 1200px; margin: 0 auto; }
-.referenz-intro { max-width: 600px; margin-bottom: 4rem; }
-.before-after {
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  gap: 0; align-items: center;
-  background: var(--cream); border-radius: var(--radius-lg);
-  overflow: hidden; border: 1px solid var(--border);
-  box-shadow: var(--shadow-lg);
-}
-.ba-panel { padding: 2rem; }
-.ba-label {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.72rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.1em;
-  padding: 0.3rem 0.8rem; border-radius: var(--radius-pill);
-  margin-bottom: 1.2rem;
-}
-.ba-label.bad { background: rgba(239,68,68,0.1); color: #dc2626; }
-.ba-label.good { background: var(--green-bg); color: var(--green-text); }
-.ba-mock {
-  border-radius: var(--radius-md); overflow: hidden;
-  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-}
-.ba-mock-bar {
-  padding: 0.5rem 0.8rem;
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.ba-mock-bar.old { background: #d1d5db; }
-.ba-mock-bar.new { background: var(--navy); }
-.ba-mock-dots { display: flex; gap: 3px; }
-.ba-mock-dots span { width: 7px; height: 7px; border-radius: 50%; }
-.ba-mock-bar.old .ba-mock-dots span { background: #9ca3af; }
-.ba-mock-bar.new .ba-mock-dots span:nth-child(1) { background: #ff5f56; }
-.ba-mock-bar.new .ba-mock-dots span:nth-child(2) { background: #ffbd2e; }
-.ba-mock-bar.new .ba-mock-dots span:nth-child(3) { background: #27c93f; }
-.ba-mock-url {
-  flex: 1; height: 18px; border-radius: 3px;
-  font-size: 0.62rem; display: flex; align-items: center;
-  padding: 0 0.5rem;
-}
-.ba-mock-bar.old .ba-mock-url { background: #e5e7eb; color: #6b7280; }
-.ba-mock-bar.new .ba-mock-url { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
-.ba-mock-body { padding: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
-.ba-mock-body.old { background: #f9fafb; }
-.ba-mock-body.new { background: var(--white); }
-.old-hero { height: 60px; background: #6b7280; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
-.old-hero span { font-size: 0.55rem; color: #d1d5db; font-weight: 600; }
-.new-hero-mini { height: 60px; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
-.new-hero-mini span { font-size: 0.55rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-.old-line { height: 7px; border-radius: 3px; background: #e5e7eb; }
-.new-line { height: 7px; border-radius: 3px; background: var(--cream-warm); }
-.old-line.w60 { width: 60%; }
-.old-line.w80 { width: 80%; }
-.old-line.w45 { width: 45%; }
-.new-line.w70 { width: 70%; }
-.new-line.w85 { width: 85%; }
-.new-line.w55 { width: 55%; }
-.ba-mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.2rem; }
-.old-block { height: 35px; background: #e5e7eb; border-radius: 4px; }
-.new-block { height: 35px; background: var(--cream-warm); border-radius: 4px; }
-.ba-score { display: flex; gap: 0.5rem; margin-top: 0.4rem; flex-wrap: wrap; }
-.score-tag {
-  font-size: 0.6rem; font-weight: 700; padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-pill);
-}
-.score-tag.red { background: rgba(239,68,68,0.1); color: #dc2626; }
-.score-tag.green { background: var(--green-bg); color: var(--green-text); }
-.ba-caption { margin-top: 1rem; }
-.ba-caption strong { display: block; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
-.ba-caption span { font-size: 0.8rem; color: var(--text-mid); }
-.ba-divider {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 0.5rem; padding: 1.5rem 0;
-  background: var(--cream-warm);
-  border-left: 1px solid var(--border); border-right: 1px solid var(--border);
-}
-.ba-arrow {
-  font-size: 1.8rem; color: var(--accent);
-  font-family: 'Playfair Display', serif; font-weight: 900;
-}
-.ba-divider span { font-size: 0.65rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; writing-mode: vertical-rl; }
-.referenz-results {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem; margin-top: 3rem;
-}
-.result-card {
-  background: var(--cream); border: 1px solid var(--border);
-  border-radius: var(--radius-md); padding: 1.5rem;
-  text-align: center;
-}
-.result-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem; font-weight: 900;
-  color: var(--navy); line-height: 1;
-}
-.result-num span { color: var(--accent); }
-.result-card p { font-size: 0.82rem; color: var(--text-mid); margin-top: 0.4rem; line-height: 1.5; }
 
 /* ── PROCESS ── */
 .process { background: var(--white); }
@@ -600,53 +500,15 @@ nav.scrolled {
 .step h3 { margin-bottom: 0.5rem; }
 .step p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.65; }
 
-/* ── TESTIMONIALS ── */
-.testimonials { background: var(--cream); }
-.testimonials-inner { max-width: 1200px; margin: 0 auto; }
-.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-.testi-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 2rem;
-  position: relative; transition: transform 0.3s, box-shadow 0.3s;
-  cursor: default;
-}
-.testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.testi-stars { color: var(--accent); font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
-.testi-quote {
-  font-size: 0.95rem; color: var(--text-mid);
-  line-height: 1.75; margin-bottom: 1.5rem; font-style: italic;
-}
-.testi-quote::before { content: '„'; color: var(--accent); font-size: 1.4rem; font-style: normal; }
-.testi-author { display: flex; align-items: center; gap: 0.9rem; }
-.testi-avatar {
-  width: 44px; height: 44px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; font-weight: 700; color: var(--white);
-  flex-shrink: 0;
-}
-.testi-avatar.c1 { background: var(--navy); }
-.testi-avatar.c2 { background: var(--navy-mid); }
-.testi-avatar.c3 { background: var(--navy-light); }
-.testi-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
-.testi-role { font-size: 0.78rem; color: var(--text-light); }
-.testi-paket {
-  position: absolute; top: 1.5rem; right: 1.5rem;
-  font-size: 0.65rem; font-weight: 700;
-  background: var(--cream); color: var(--accent);
-  padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);
-  text-transform: uppercase; letter-spacing: 0.08em;
-}
-
 /* ── PAKETE ── */
-.pakete { background: var(--white); }
+.pakete { background: var(--cream); }
 .pakete-inner { max-width: 1200px; margin: 0 auto; }
 .pakete-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem; margin-top: 3.5rem;
 }
 .paket {
-  background: var(--cream); border: 1px solid var(--border);
+  background: var(--white); border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 2.5rem;
   position: relative; transition: transform 0.3s, box-shadow 0.3s; cursor: default;
 }
@@ -717,7 +579,11 @@ nav.scrolled {
   border-radius: var(--radius-pill); padding: 0.6rem 1.5rem;
   margin-bottom: 2.5rem;
 }
-.garantie-badge-icon { font-size: 1.8rem; }
+.garantie-badge-icon {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
 .garantie-badge-text { text-align: left; }
 .garantie-badge-text strong { display: block; font-size: 0.9rem; color: var(--white); font-weight: 600; }
 .garantie-badge-text span { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
@@ -731,7 +597,11 @@ nav.scrolled {
   background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-md); padding: 1.5rem;
 }
-.garantie-point-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+.garantie-point-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); margin-bottom: 0.8rem;
+}
 .garantie-point strong { display: block; font-size: 0.9rem; color: var(--white); margin-bottom: 0.4rem; }
 .garantie-point span { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
 
@@ -819,24 +689,16 @@ nav.scrolled {
   cursor: pointer; transition: background 0.2s, transform 0.2s;
 }
 .cta-form button:hover { background: var(--navy-mid); transform: translateY(-1px); }
-.form-success {
-  display: none; text-align: center; padding: 2rem;
-}
+.form-success { display: none; text-align: center; padding: 2rem; }
 .form-success.visible { display: block; }
-.form-success-icon { font-size: 3rem; margin-bottom: 1rem; }
+.form-success-icon { margin-bottom: 1rem; color: var(--green-text); }
 .form-success h4 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 0.5rem; }
 .form-success p { font-size: 0.9rem; color: var(--text-mid); }
-.cta-alts {
-  display: flex; gap: 1rem; justify-content: center; align-items: center;
-  margin-top: 2rem; flex-wrap: wrap;
+.cta-guarantee {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.75rem; color: var(--text-light); margin-top: 1.2rem;
 }
-.cta-alt-link {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.85rem; color: rgba(255,255,255,0.6);
-  text-decoration: none; transition: color 0.2s;
-}
-.cta-alt-link:hover { color: var(--accent); }
-.cta-guarantee { display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.75rem; color: var(--text-light); margin-top: 1.2rem; }
+.cta-guarantee svg { color: var(--text-light); flex-shrink: 0; }
 
 /* ── FOOTER ── */
 footer {
@@ -901,13 +763,8 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   .stats-band { grid-template-columns: 1fr 1fr; padding: 2.5rem 1.5rem; }
   .stat-item + .stat-item { border-left: none; padding-left: 0; }
   .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .before-after { grid-template-columns: 1fr; }
-  .ba-divider { flex-direction: row; padding: 1.2rem; border-left: none; border-right: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .ba-divider span { writing-mode: horizontal-tb; }
-  .referenz-results { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .process-steps::before { display: none; }
-  .testimonials-grid { grid-template-columns: 1fr; }
   .pakete-grid { grid-template-columns: 1fr; }
   .paket.featured { transform: scale(1); }
   .paket.featured:hover { transform: translateY(-6px); }
@@ -952,7 +809,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <div class="nav-links">
     <a href="#prozess">Vorgehen</a>
     <a href="#pakete">Preise</a>
-    <a href="#testimonials">Referenzen</a>
     <a href="#faq">FAQ</a>
     <a href="#kontakt" class="nav-cta">Gespräch buchen</a>
   </div>
@@ -1005,7 +861,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="browser-url">ihr-unternehmen.ch</div>
       </div>
       <div class="browser-content">
-        <div class="mock-hero-bar"><div class="mock-tag">✦ Frisch & Modern</div></div>
+        <div class="mock-hero-bar"><div class="mock-tag">Frisch &amp; Modern</div></div>
         <div class="mock-rows">
           <div class="mock-row w-70"></div>
           <div class="mock-row w-85"></div>
@@ -1016,7 +872,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
           <div class="mock-col"></div>
           <div class="mock-col"></div>
         </div>
-        <div class="mock-score">✓ Mobil · Google · Schnell</div>
+        <div class="mock-score">Mobil · Google · Schnell</div>
       </div>
     </div>
   </div>
@@ -1026,28 +882,51 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 <div class="trust-bar">
   <div class="trust-bar-inner">
     <div class="trust-item">
-      <div class="trust-icon">🇨🇭</div>
+      <div class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 2L3 5v6c0 4.2 3.1 7.4 7 8.9 3.9-1.5 7-4.7 7-8.9V5L10 2z"/>
+        </svg>
+      </div>
       <div><strong>Swiss Made</strong>Entwicklung in der Schweiz</div>
     </div>
     <div class="trust-sep"></div>
     <div class="trust-item">
-      <div class="trust-icon">⚡</div>
+      <div class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z"/>
+        </svg>
+      </div>
       <div><strong>7 Werktage</strong>Von Gespräch bis Go-Live</div>
     </div>
     <div class="trust-sep"></div>
     <div class="trust-item">
-      <div class="trust-icon">🔒</div>
+      <div class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <rect x="3" y="9" width="14" height="10" rx="2"/>
+          <path d="M7 9V6a3 3 0 016 0v3"/>
+        </svg>
+      </div>
       <div><strong>Fixpreis-Garantie</strong>Keine versteckten Kosten</div>
     </div>
     <div class="trust-sep"></div>
     <div class="trust-item">
-      <div class="trust-icon">📱</div>
+      <div class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <rect x="5" y="1" width="10" height="18" rx="2"/>
+          <circle cx="10" cy="15.5" r="0.75" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
       <div><strong>Mobile-First</strong>Perfekt auf dem Handy</div>
     </div>
     <div class="trust-sep"></div>
     <div class="trust-item">
-      <div class="trust-icon">🔍</div>
-      <div><strong>Bei Google gefunden</strong>SEO & lokale Suche</div>
+      <div class="trust-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9" cy="9" r="6"/>
+          <path d="M13.5 13.5L18 18"/>
+        </svg>
+      </div>
+      <div><strong>Bei Google gefunden</strong>SEO &amp; lokale Suche</div>
     </div>
   </div>
 </div>
@@ -1062,12 +941,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <div class="stat-item reveal">
     <div class="stat-number">64%</div>
     <div class="stat-label">aller KMU haben keine eigene Website — dabei googeln 80% der Kunden zuerst</div>
-    <div class="stat-source">KMU Digital Pulse 2025, localsearch & HSLU</div>
+    <div class="stat-source">KMU Digital Pulse 2025, localsearch &amp; HSLU</div>
   </div>
   <div class="stat-item reveal">
     <div class="stat-number">77%</div>
     <div class="stat-label">der Bevölkerung möchten KMU-Dienste online finden und direkt buchen</div>
-    <div class="stat-source">KMU Digital Pulse 2025, localsearch & HSLU</div>
+    <div class="stat-source">KMU Digital Pulse 2025, localsearch &amp; HSLU</div>
   </div>
   <div class="stat-item reveal">
     <div class="stat-number">7</div>
@@ -1087,7 +966,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="problem-card bad">
           <div class="card-icon">✕</div>
           <div class="card-text">
-            <strong>Vorher: veraltet & unsichtbar</strong>
+            <strong>Vorher: veraltet &amp; unsichtbar</strong>
             <span>Nicht fürs Handy optimiert, bei Google nicht gefunden, kein Kontaktformular</span>
           </div>
         </div>
@@ -1095,7 +974,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="problem-card good">
           <div class="card-icon">✓</div>
           <div class="card-text">
-            <strong>Nachher: modern & auffindbar</strong>
+            <strong>Nachher: modern &amp; auffindbar</strong>
             <span>Auf jedem Gerät top, bei Google vorne, Kunden kontaktieren Sie direkt</span>
           </div>
         </div>
@@ -1105,127 +984,64 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <div class="solution-box-label">Was wir konkret erneuern</div>
       <div class="solution-items">
         <div class="solution-item">
-          <div class="solution-icon">📱</div>
+          <div class="solution-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <rect x="5" y="1" width="10" height="18" rx="2"/>
+              <circle cx="10" cy="15.5" r="0.75" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div>
             <strong>Perfekt auf jedem Gerät</strong>
             <span>Über 70% Ihrer Besucher kommen per Smartphone. Ihre neue Website sieht auf jedem Bildschirm top aus.</span>
           </div>
         </div>
         <div class="solution-item">
-          <div class="solution-icon">🔍</div>
+          <div class="solution-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="9" cy="9" r="6"/>
+              <path d="M13.5 13.5L18 18"/>
+            </svg>
+          </div>
           <div>
             <strong>Bei Google gefunden werden</strong>
             <span>Wir optimieren Ihre Website, damit Kunden in Ihrer Region Sie bei Google finden — ohne teure Werbung.</span>
           </div>
         </div>
         <div class="solution-item">
-          <div class="solution-icon">⚡</div>
+          <div class="solution-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z"/>
+            </svg>
+          </div>
           <div>
             <strong>Blitzschnell laden</strong>
             <span>Jede Sekunde Ladezeit kostet 7% der Besucher. Ihre neue Website lädt in unter 2 Sekunden.</span>
           </div>
         </div>
         <div class="solution-item">
-          <div class="solution-icon">📬</div>
+          <div class="solution-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <rect x="2" y="5" width="16" height="12" rx="2"/>
+              <path d="M2 7l8 5 8-5"/>
+            </svg>
+          </div>
           <div>
             <strong>Kunden direkt kontaktieren</strong>
             <span>Kontaktformular, Google Maps, Telefon-Button — Kunden erreichen Sie mit einem Klick.</span>
           </div>
         </div>
         <div class="solution-item">
-          <div class="solution-icon">🗺️</div>
+          <div class="solution-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M10 2a6 6 0 016 6c0 4.5-6 10-6 10S4 12.5 4 8a6 6 0 016-6z"/>
+              <circle cx="10" cy="8" r="2"/>
+            </svg>
+          </div>
           <div>
             <strong>Lokale Sichtbarkeit</strong>
             <span>Google Maps Einbindung und lokale Suchoptimierung — Sie werden in Ihrer Region gefunden.</span>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REFERENZ -->
-<section class="referenz" id="referenz">
-  <div class="referenz-inner">
-    <div class="referenz-intro reveal">
-      <div class="section-label">Echte Resultate</div>
-      <h2>Vorher. Nachher.<br>Der Unterschied ist sichtbar.</h2>
-      <p class="section-sub">Was aus einer veralteten Website werden kann — in 7 Tagen. Kein Fachwissen nötig, kein Aufwand Ihrer­seits.</p>
-    </div>
-    <div class="before-after reveal" style="transition-delay:0.15s">
-      <div class="ba-panel">
-        <div class="ba-label bad">✕ Vorher</div>
-        <div class="ba-mock">
-          <div class="ba-mock-bar old">
-            <div class="ba-mock-dots"><span></span><span></span><span></span></div>
-            <div class="ba-mock-url">joshele.ch</div>
-          </div>
-          <div class="ba-mock-body old">
-            <div class="old-hero"><span>WILLKOMMEN</span></div>
-            <div class="old-line w80"></div>
-            <div class="old-line w60"></div>
-            <div class="old-line w45"></div>
-            <div class="ba-mock-grid">
-              <div class="old-block"></div>
-              <div class="old-block"></div>
-            </div>
-            <div class="ba-score">
-              <span class="score-tag red">✕ Nicht mobil</span>
-              <span class="score-tag red">✕ Kein SSL</span>
-              <span class="score-tag red">✕ Google: nicht gefunden</span>
-            </div>
-          </div>
-        </div>
-        <div class="ba-caption">
-          <strong>Joshele.ch — vorher</strong>
-          <span>Veraltet, nicht mobil, bei Google unsichtbar</span>
-        </div>
-      </div>
-      <div class="ba-divider">
-        <div class="ba-arrow">→</div>
-        <span>7 Tage</span>
-      </div>
-      <div class="ba-panel">
-        <div class="ba-label good">✓ Nachher</div>
-        <div class="ba-mock">
-          <div class="ba-mock-bar new">
-            <div class="ba-mock-dots"><span></span><span></span><span></span></div>
-            <div class="ba-mock-url">🔒 joshele.ch</div>
-          </div>
-          <div class="ba-mock-body new">
-            <div class="new-hero-mini"><span>✦ Frisch & Modern</span></div>
-            <div class="new-line w85"></div>
-            <div class="new-line w70"></div>
-            <div class="new-line w55"></div>
-            <div class="ba-mock-grid">
-              <div class="new-block"></div>
-              <div class="new-block"></div>
-            </div>
-            <div class="ba-score">
-              <span class="score-tag green">✓ Mobile-First</span>
-              <span class="score-tag green">✓ SSL & Schnell</span>
-              <span class="score-tag green">✓ Google: Seite 1</span>
-            </div>
-          </div>
-        </div>
-        <div class="ba-caption">
-          <strong>Joshele.ch — nachher</strong>
-          <span>Modern, mobil, bei Google auf Seite 1</span>
-        </div>
-      </div>
-    </div>
-    <div class="referenz-results">
-      <div class="result-card reveal">
-        <div class="result-num">+<span>210</span>%</div>
-        <p>mehr Besucher über Google in den ersten 3 Monaten nach dem Relaunch</p>
-      </div>
-      <div class="result-card reveal" style="transition-delay:0.1s">
-        <div class="result-num"><span>4.8</span>×</div>
-        <p>mehr Kontaktanfragen über das neue Formular pro Monat</p>
-      </div>
-      <div class="result-card reveal" style="transition-delay:0.2s">
-        <div class="result-num"><span>7</span></div>
-        <p>Werktage vom ersten Gespräch bis zur fertigen, live geschalteten Website</p>
       </div>
     </div>
   </div>
@@ -1268,55 +1084,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div class="testimonials-inner">
-    <div class="reveal">
-      <div class="section-label">Was unsere Kunden sagen</div>
-      <h2>Echte Stimmen.<br>Echte Resultate.</h2>
-      <p class="section-sub">Schweizer KMU-Inhaber, die ihre Website bei uns erneuert haben — in ihren eigenen Worten.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testi-card reveal" style="transition-delay:0s">
-        <div class="testi-paket">Komplett-Paket</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Ich war skeptisch, ob sich das lohnt. Heute kommen 60% meiner Neukunden über die Website. Früher hat mich kaum jemand gefunden. Der Prozess war unkompliziert — ich musste fast nichts selber machen."</p>
-        <div class="testi-author">
-          <div class="testi-avatar c1">BM</div>
-          <div>
-            <div class="testi-name">Beat Müller</div>
-            <div class="testi-role">Müller Schreinerei GmbH, Bern</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="transition-delay:0.1s">
-        <div class="testi-paket">Starter-Paket</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Als Einzelperson hatte ich nie Zeit, mich um die Website zu kümmern. Auffrisch hat mir in einer Woche einen professionellen Online-Auftritt gemacht. Meine Patienten finden mich jetzt bei Google."</p>
-        <div class="testi-author">
-          <div class="testi-avatar c2">SZ</div>
-          <div>
-            <div class="testi-name">Sandra Zbinden</div>
-            <div class="testi-role">Naturheilpraxis, Zürich</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="transition-delay:0.2s">
-        <div class="testi-paket">Online-Präsenz-Paket</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Unser Restaurant war auf Google kaum sichtbar. Seit der neuen Website bekommen wir regelmässig Tischreservierungen direkt über die Seite. Das hat unsere Auslastung spürbar verbessert."</p>
-        <div class="testi-author">
-          <div class="testi-avatar c3">MP</div>
-          <div>
-            <div class="testi-name">Marco Pellegrini</div>
-            <div class="testi-role">Ristorante Pellegrini, Lugano</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PAKETE -->
 <section class="pakete" id="pakete">
   <div class="pakete-inner">
@@ -1331,8 +1098,8 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="paket-price">CHF 2'900<span> / einmalig</span></div>
         <div class="paket-desc">Für Selbstständige und Kleinbetriebe, die schnell und günstig online sichtbar sein möchten.</div>
         <ul class="paket-features">
-          <li><div class="check-icon">✓</div> Eine Seite, modern & mobil-optimiert</li>
-          <li><div class="check-icon">✓</div> Kontaktformular & Telefon-Button</li>
+          <li><div class="check-icon">✓</div> Eine Seite, modern &amp; mobil-optimiert</li>
+          <li><div class="check-icon">✓</div> Kontaktformular &amp; Telefon-Button</li>
           <li><div class="check-icon">✓</div> Google Maps Integration</li>
           <li><div class="check-icon">✓</div> Basis-Suchmaschinenoptimierung</li>
           <li><div class="check-icon">✓</div> Sicherheitszertifikat (SSL) inklusive</li>
@@ -1342,15 +1109,15 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <a href="#kontakt" class="paket-cta">Jetzt anfragen</a>
       </div>
       <div class="paket featured reveal" style="transition-delay:0.15s">
-        <div class="featured-tag">⭐ Meistgewählt</div>
+        <div class="featured-tag">Meistgewählt</div>
         <div class="paket-name">Komplett</div>
         <div class="paket-price">CHF 4'900<span> / einmalig</span></div>
         <div class="paket-desc">Für KMU, die einen vollständigen, professionellen Webauftritt mit mehreren Seiten möchten.</div>
         <ul class="paket-features">
           <li><div class="check-icon">✓</div> Mehrere Seiten (bis zu 8 Seiten)</li>
-          <li><div class="check-icon">✓</div> Individuelles Design mit Ihrem Logo & Farben</li>
+          <li><div class="check-icon">✓</div> Individuelles Design mit Ihrem Logo &amp; Farben</li>
           <li><div class="check-icon">✓</div> Vollständige Suchmaschinenoptimierung</li>
-          <li><div class="check-icon">✓</div> Lokale Sichtbarkeit (Google Maps & lokale Suche)</li>
+          <li><div class="check-icon">✓</div> Lokale Sichtbarkeit (Google Maps &amp; lokale Suche)</li>
           <li><div class="check-icon">✓</div> Kontaktformular, Telefon, Google Maps</li>
           <li><div class="check-icon">✓</div> Technische Optimierung (Ladezeit, Sicherheit)</li>
           <li><div class="check-icon">✓</div> 1 Anpassungsrunde inklusive</li>
@@ -1364,7 +1131,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="paket-desc">Website und Social Media aus einer Hand — Ihr gesamter digitaler Auftritt, einheitlich und professionell.</div>
         <ul class="paket-features">
           <li><div class="check-icon">✓</div> Alles aus dem Komplett-Paket</li>
-          <li><div class="check-icon">✓</div> Instagram-Profil eingerichtet & optimiert</li>
+          <li><div class="check-icon">✓</div> Instagram-Profil eingerichtet &amp; optimiert</li>
           <li><div class="check-icon">✓</div> LinkedIn-Profil professionell gestaltet</li>
           <li><div class="check-icon">✓</div> Einheitliches Design auf allen Kanälen</li>
           <li><div class="check-icon">✓</div> Bild- und Text-Vorlagen zum Selbst-Posten</li>
@@ -1391,7 +1158,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 <section class="garantie" id="garantie">
   <div class="garantie-inner">
     <div class="garantie-badge reveal">
-      <div class="garantie-badge-icon">🛡️</div>
+      <div class="garantie-badge-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 3L4 7v8c0 5.5 4.3 10.4 10 12 5.7-1.6 10-6.5 10-12V7L14 3z"/>
+          <path d="M9 14l3 3 6-6"/>
+        </svg>
+      </div>
       <div class="garantie-badge-text">
         <strong>Das Auffrisch-Versprechen</strong>
         <span>Unsere Garantien für Ihre Sicherheit</span>
@@ -1401,17 +1173,31 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <p class="reveal">Wir wissen, dass viele KMU-Inhaber schlechte Erfahrungen mit Web-Agenturen gemacht haben: überteuert, ewig lange Projekte, keine Ergebnisse. Bei Auffrisch ist das anders — wir stehen zu unserem Wort.</p>
     <div class="garantie-points">
       <div class="garantie-point reveal" style="transition-delay:0s">
-        <div class="garantie-point-icon">📅</div>
+        <div class="garantie-point-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <rect x="3" y="5" width="22" height="20" rx="3"/>
+            <path d="M19 3v4M9 3v4M3 13h22"/>
+          </svg>
+        </div>
         <strong>7-Tage-Garantie</strong>
         <span>Ihre neue Website ist innerhalb von 7 Werktagen live — oder wir arbeiten kostenlos weiter bis sie es ist.</span>
       </div>
       <div class="garantie-point reveal" style="transition-delay:0.1s">
-        <div class="garantie-point-icon">💰</div>
+        <div class="garantie-point-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="14" cy="14" r="11"/>
+            <path d="M14 8v6M14 19h.01"/>
+          </svg>
+        </div>
         <strong>Fixpreis-Garantie</strong>
         <span>Der vereinbarte Preis ist final. Kein Stundensatz, keine Nachforderungen, keine bösen Überraschungen.</span>
       </div>
       <div class="garantie-point reveal" style="transition-delay:0.2s">
-        <div class="garantie-point-icon">✏️</div>
+        <div class="garantie-point-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 3l5 5L10 23H5v-5L20 3z"/>
+          </svg>
+        </div>
         <strong>Anpassungsrunde inklusive</strong>
         <span>Eine vollständige Überarbeitungsrunde ist in jedem Paket inklusive. Gefällt etwas nicht? Wir ändern es.</span>
       </div>
@@ -1437,12 +1223,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <div class="markt-card reveal" style="transition-delay:0.15s">
         <div class="markt-num">77%</div>
         <p>der Schweizer Bevölkerung möchten KMU-Dienstleistungen online suchen und direkt buchen können — aber nur 3% aller KMU bieten das an.</p>
-        <div class="source">KMU Digital Pulse 2025 — localsearch & Hochschule Luzern</div>
+        <div class="source">KMU Digital Pulse 2025 — localsearch &amp; Hochschule Luzern</div>
       </div>
       <div class="markt-card reveal" style="transition-delay:0.3s">
         <div class="markt-num">80%</div>
         <p>der Kunden googeln zuerst, bevor sie ein lokales Unternehmen kontaktieren oder besuchen. Wer online nicht sichtbar ist, wird schlicht nicht gefunden.</p>
-        <div class="source">KMU Digital Pulse 2025 — localsearch & Hochschule Luzern</div>
+        <div class="source">KMU Digital Pulse 2025 — localsearch &amp; Hochschule Luzern</div>
       </div>
     </div>
   </div>
@@ -1499,7 +1285,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
           <div class="faq-icon">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          Der Fixpreis für die Website ist alles — keine Stundensätze, keine Überraschungsrechnungen. Zusätzlich fallen jährlich ca. CHF 100–200 für Domain und Hosting an (wie Miete für Ihre Adresse im Internet). Das klären wir transparent im ersten Gespräch. Die optionale Jahrespflege kostet CHF 990 — ist aber nicht Pflicht.
+          Der Fixpreis für die Website ist alles — keine Stundensätze, keine Überraschungsrechnungen. Zusätzlich fallen jährlich ca. CHF 100–200 für Domain und Hosting an. Das klären wir transparent im ersten Gespräch. Die optionale Jahrespflege kostet CHF 990 — ist aber nicht Pflicht.
         </div></div>
       </div>
       <div class="faq-item">
@@ -1541,7 +1327,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <h3>Nachricht senden</h3>
     <p>Oder direkt: <a href="mailto:web@auffrisch.ch" style="color:var(--navy);font-weight:600;">web@auffrisch.ch</a></p>
     <div class="form-success" id="formSuccess">
-      <div class="form-success-icon">✅</div>
+      <div class="form-success-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="24" r="22"/>
+          <path d="M15 24l7 7 12-12"/>
+        </svg>
+      </div>
       <h4>Nachricht erhalten!</h4>
       <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen. Danke für Ihr Interesse.</p>
     </div>
@@ -1567,14 +1358,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <button type="submit">Kostenlos anfragen →</button>
     </form>
     <div class="cta-guarantee">
-      <span>🔒</span> Kein Spam · Keine Verpflichtung · Antwort innert 24h
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <rect x="1" y="5.5" width="11" height="7" rx="1.5"/>
+        <path d="M3.5 5.5V4a3 3 0 016 0v1.5"/>
+      </svg>
+      Kein Spam · Keine Verpflichtung · Antwort innert 24h
     </div>
-  </div>
-  <div class="cta-alts">
-    <a href="mailto:web@auffrisch.ch" class="cta-alt-link">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-      web@auffrisch.ch
-    </a>
   </div>
 </section>
 
@@ -1589,7 +1378,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <h4>Navigation</h4>
       <div class="footer-links">
         <a href="#problem">Das Problem</a>
-        <a href="#referenz">Referenzen</a>
         <a href="#prozess">Vorgehen</a>
         <a href="#pakete">Preise</a>
         <a href="#faq">FAQ</a>
@@ -1625,7 +1413,7 @@ document.addEventListener('mousemove', e => {
   follower.style.left = e.clientX + 'px';
   follower.style.top = e.clientY + 'px';
 });
-document.querySelectorAll('a, button, .paket, .step, .problem-card, .faq-q, .testi-card, .markt-card').forEach(el => {
+document.querySelectorAll('a, button, .paket, .step, .problem-card, .faq-q, .markt-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.style.transform = 'translate(-50%,-50%) scale(2)';
     cursor.style.background = 'var(--accent)';
@@ -1706,27 +1494,17 @@ function handleSubmit(e) {
     e.preventDefault();
     form.style.display = 'none';
     success.classList.add('visible');
-    return;
   }
-  form.addEventListener('submit', () => {
-    setTimeout(() => {
-      form.style.display = 'none';
-      success.classList.add('visible');
-    }, 500);
-  });
 }
 
 // ── STICKY CTA (hide when kontakt in view) ──
-const kontakt = document.getElementById('kontakt');
-const stickyObs = new IntersectionObserver(entries => {
-  const stickyCta = document.getElementById('stickyCta');
-  if (entries[0].isIntersecting) {
-    stickyCta.style.display = 'none';
-  } else {
-    stickyCta.style.display = '';
-  }
-}, { threshold: 0.1 });
-if (kontakt) stickyObs.observe(kontakt);
+const kontaktSection = document.getElementById('kontakt');
+if (kontaktSection) {
+  new IntersectionObserver(entries => {
+    document.getElementById('stickyCta').style.display =
+      entries[0].isIntersecting ? 'none' : '';
+  }, { threshold: 0.1 }).observe(kontaktSection);
+}
 </script>
 </body>
 </html>

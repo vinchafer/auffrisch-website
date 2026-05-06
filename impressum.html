@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Auffrisch</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f3c; --navy-mid: #1a3560;
+    --cream: #f8f5f0; --cream-warm: #f0ebe2;
+    --white: #ffffff; --accent: #c8a96e;
+    --text-mid: #4a5568; --text-light: #8a96a8;
+    --border: rgba(13,31,60,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(248,245,240,0.96); backdrop-filter: blur(12px);
+    padding: 1.2rem 4rem; display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); text-decoration: none; }
+  .nav-logo span { color: var(--accent); }
+  .nav-back { font-size: 0.88rem; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--navy); }
+  main { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: -0.03em; }
+  .subtitle { font-size: 0.85rem; color: var(--text-light); margin-bottom: 3rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 0.75rem; }
+  p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 0.5rem; }
+  a { color: var(--navy); }
+  .divider { height: 1px; background: var(--border); margin: 2rem 0; }
+  footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--text-light); border-top: 1px solid var(--border); }
+  @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } main { padding: 3rem 1.5rem 5rem; } h1 { font-size: 2rem; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">auffrisch<span>.</span></a>
+  <a href="/" class="nav-back">← Zurück zur Website</a>
+</nav>
+<main>
+  <h1>Impressum</h1>
+  <p class="subtitle">Angaben gemäss Art. 3 Abs. 1 lit. s UWG (Schweiz)</p>
+
+  <h2>Anbieter dieser Website</h2>
+  <p><strong>Auffrisch</strong></p>
+  <p>Inh. [Ihr Name]</p>
+  <p>[Strasse und Hausnummer]</p>
+  <p>[PLZ] [Ort], Schweiz</p>
+
+  <div class="divider"></div>
+
+  <h2>Kontakt</h2>
+  <p>E-Mail: <a href="mailto:web@auffrisch.ch">web@auffrisch.ch</a></p>
+
+  <div class="divider"></div>
+
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>[Ihr Name], Adresse wie oben</p>
+
+  <div class="divider"></div>
+
+  <h2>Haftungsausschluss</h2>
+  <p>Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.</p>
+
+  <h2>Urheberrechte</h2>
+  <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich Auffrisch oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.</p>
+
+  <h2>Datenschutz</h2>
+  <p>Informationen zum Umgang mit personenbezogenen Daten finden Sie in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+</main>
+<footer>© 2026 Auffrisch · <a href="/datenschutz.html">Datenschutz</a></footer>
+</body>
+</html>

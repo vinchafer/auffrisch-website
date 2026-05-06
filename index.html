@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auffrisch – Ihre Website. Neu gedacht. | Webdesign für Schweizer KMU</title>
+<meta name="description" content="Veraltete Website? Wir erneuern Websites von Schweizer KMU — modern, mobil, bei Google gefunden. Fixpreis ab CHF 2'900. In 7 Tagen online. Kostenlos beraten lassen.">
+<link rel="canonical" href="https://auffrisch.ch/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://auffrisch.ch/">
+<meta property="og:title" content="Auffrisch – Ihre Website. Neu gedacht.">
+<meta property="og:description" content="Website-Erneuerung für Schweizer KMU. Fixpreis ab CHF 2'900. In 7 Tagen online.">
+<meta property="og:locale" content="de_CH">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Auffrisch",
+  "description": "Website-Erneuerung für Schweizer KMU. Modern, mobil, bei Google gefunden.",
+  "url": "https://auffrisch.ch",
+  "email": "web@auffrisch.ch",
+  "address": { "@type": "PostalAddress", "addressCountry": "CH" },
+  "priceRange": "CHF 2900–6900",
+  "areaServed": "CH",
+  "serviceType": "Webdesign",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Website-Pakete",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Starter", "price": "2900", "priceCurrency": "CHF" },
+      { "@type": "Offer", "name": "Komplett", "price": "4900", "priceCurrency": "CHF" },
+      { "@type": "Offer", "name": "Online Präsenz", "price": "6900", "priceCurrency": "CHF" }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── TOKENS ── */
+:root {
+  --navy:        #0d1f3c;
+  --navy-mid:    #1a3560;
+  --navy-light:  #2a4a7f;
+  --cream:       #f8f5f0;
+  --cream-warm:  #f0ebe2;
+  --white:       #ffffff;
+  --accent:      #c8a96e;
+  --accent-light:#e8d5a8;
+  --accent-dark: #b8994e;
+  --green:       #22c55e;
+  --green-bg:    rgba(34,197,94,0.1);
+  --green-text:  #16a34a;
+  --red:         #ef4444;
+  --text-dark:   #0d1f3c;
+  --text-mid:    #4a5568;
+  --text-light:  #8a96a8;
+  --border:      rgba(13,31,60,0.08);
+  --shadow-sm:   0 2px 12px rgba(13,31,60,0.06);
+  --shadow-md:   0 8px 40px rgba(13,31,60,0.10);
+  --shadow-lg:   0 20px 60px rgba(13,31,60,0.14);
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-pill: 999px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+ul { list-style: none; }
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+h1 { font-size: clamp(2.8rem, 6vw, 5.2rem); font-weight: 900; color: var(--navy); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--navy); margin-bottom: 1rem; }
+h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+p { line-height: 1.75; }
+
+.section-label {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1rem;
+}
+.section-label::before {
+  content: ''; width: 24px; height: 1.5px;
+  background: var(--accent); border-radius: 2px;
+}
+.section-sub {
+  font-size: 1.05rem; color: var(--text-mid);
+  line-height: 1.75; max-width: 540px;
+}
+
+/* ── LAYOUT ── */
+.container { max-width: 1200px; margin: 0 auto; }
+section { padding: 6rem 4rem; }
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--navy); color: var(--white);
+  padding: 1rem 2rem; border-radius: var(--radius-pill);
+  text-decoration: none; font-weight: 600; font-size: 1rem;
+  letter-spacing: -0.01em;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 4px 20px rgba(13,31,60,0.2);
+  border: none; cursor: pointer; font-family: inherit;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(13,31,60,0.3); background: var(--navy-mid); }
+.btn-primary svg { transition: transform 0.2s; flex-shrink: 0; }
+.btn-primary:hover svg { transform: translateX(3px); }
+
+.btn-accent {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent); color: var(--white);
+  padding: 1rem 2rem; border-radius: var(--radius-pill);
+  text-decoration: none; font-weight: 600; font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 4px 20px rgba(200,169,110,0.3);
+  border: none; cursor: pointer; font-family: inherit;
+}
+.btn-accent:hover { transform: translateY(-2px); background: var(--accent-dark); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--navy); padding: 1rem 1.5rem;
+  text-decoration: none; font-weight: 500; font-size: 0.95rem;
+  transition: gap 0.2s; background: none; border: none; cursor: pointer; font-family: inherit;
+}
+.btn-ghost:hover { gap: 0.8rem; }
+
+/* ── CURSOR (Desktop only) ── */
+.cursor, .cursor-follower { pointer-events: none; position: fixed; z-index: 9999; top: 0; left: 0; }
+.cursor {
+  width: 12px; height: 12px;
+  background: var(--navy); border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+}
+.cursor-follower {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--navy); border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.12s ease, top 0.12s ease, width 0.3s, height 0.3s, border-color 0.3s;
+  opacity: 0.5; z-index: 9998;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+}
+nav.scrolled {
+  background: rgba(248,245,240,0.96);
+  backdrop-filter: blur(12px);
+  padding: 1rem 4rem;
+  box-shadow: 0 1px 0 var(--border);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--navy); letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a {
+  text-decoration: none; color: var(--text-mid);
+  font-size: 0.9rem; font-weight: 500;
+  letter-spacing: 0.01em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--navy); }
+.nav-cta {
+  background: var(--navy); color: var(--white) !important;
+  padding: 0.6rem 1.4rem; border-radius: var(--radius-pill);
+  transition: background 0.2s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+
+.nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 4px; background: none; border: none;
+}
+.nav-burger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--navy); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed; inset: 0; top: 0; z-index: 99;
+  background: var(--cream);
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 2.5rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 700;
+  color: var(--navy); text-decoration: none;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--accent); }
+.mobile-menu .menu-cta { font-family: 'DM Sans', sans-serif; font-size: 1.1rem; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 8rem 4rem 5rem;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,53,96,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(200,169,110,0.08) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.5;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+.hero-content { max-width: 680px; position: relative; z-index: 1; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 1rem;
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--text-mid); letter-spacing: 0.05em;
+  text-transform: uppercase; margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.6s 0.1s forwards;
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  background: var(--green); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity:1;transform:scale(1); } 50% { opacity:0.6;transform:scale(1.3); } }
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 0.7s 0.2s forwards;
+}
+.hero h1 em {
+  font-style: normal; color: var(--accent); position: relative;
+}
+.hero h1 em::after {
+  content: ''; position: absolute;
+  bottom: 0.05em; left: 0; right: 0;
+  height: 3px; background: var(--accent);
+  opacity: 0.3; border-radius: 2px;
+}
+.hero-sub {
+  font-size: 1.2rem; color: var(--text-mid);
+  line-height: 1.75; max-width: 520px;
+  margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 0.7s 0.35s forwards;
+}
+.hero-checks {
+  display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem;
+  margin-bottom: 2.5rem;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 0.7s 0.45s forwards;
+}
+.hero-check {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+}
+.hero-check svg { color: var(--green); flex-shrink: 0; }
+.hero-actions {
+  display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 0.7s 0.55s forwards;
+}
+
+.hero-visual {
+  position: absolute; right: 3rem; top: 50%;
+  transform: translateY(-50%);
+  width: 40%; max-width: 520px;
+  opacity: 0;
+  animation: fadeLeft 0.8s 0.6s forwards;
+}
+.browser-mock {
+  background: var(--white); border-radius: 16px;
+  box-shadow: var(--shadow-lg), 0 8px 24px rgba(13,31,60,0.08);
+  overflow: hidden; border: 1px solid var(--border);
+}
+.browser-bar {
+  background: var(--cream-warm); padding: 0.7rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.browser-dots { display: flex; gap: 5px; }
+.browser-dots span { width: 10px; height: 10px; border-radius: 50%; }
+.browser-dots span:nth-child(1) { background: #ff5f56; }
+.browser-dots span:nth-child(2) { background: #ffbd2e; }
+.browser-dots span:nth-child(3) { background: #27c93f; }
+.browser-url {
+  flex: 1; background: var(--white); border-radius: 6px;
+  padding: 0.3rem 0.8rem; font-size: 0.75rem; color: var(--text-light);
+  text-align: center; border: 1px solid var(--border);
+}
+.browser-content { padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column; gap: 0.8rem; }
+.mock-hero-bar {
+  height: 90px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.mock-tag {
+  font-size: 0.65rem; font-weight: 700;
+  background: var(--accent); color: var(--white);
+  padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);
+  letter-spacing: 0.08em; text-transform: uppercase; z-index: 1;
+}
+.mock-rows { display: flex; flex-direction: column; gap: 0.5rem; }
+.mock-row { height: 9px; border-radius: 4px; background: var(--cream-warm); }
+.mock-row.w-70 { width: 70%; }
+.mock-row.w-50 { width: 50%; }
+.mock-row.w-85 { width: 85%; }
+.mock-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; }
+.mock-col { height: 55px; border-radius: 8px; background: var(--cream-warm); }
+.mock-score {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.7rem; font-weight: 600;
+  background: var(--green-bg); color: var(--green-text);
+  padding: 0.3rem 0.7rem; border-radius: var(--radius-pill);
+  border: 1px solid rgba(34,197,94,0.2); align-self: flex-start;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.8rem 4rem;
+}
+.trust-bar-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  gap: 3rem; flex-wrap: wrap;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+  white-space: nowrap;
+}
+.trust-icon {
+  width: 38px; height: 38px;
+  background: var(--cream); border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+}
+.trust-item strong { color: var(--navy); display: block; font-size: 1rem; }
+.trust-sep { width: 1px; height: 36px; background: var(--border); flex-shrink: 0; }
+
+/* ── STATS ── */
+.stats-band {
+  background: var(--navy); padding: 4rem;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; position: relative; overflow: hidden;
+}
+.stats-band::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(200,169,110,0.08) 0%, transparent 70%);
+}
+.stat-item { text-align: center; position: relative; z-index: 1; }
+.stat-item + .stat-item {
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding-left: 2rem;
+}
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem; font-weight: 900;
+  color: var(--accent); line-height: 1; margin-bottom: 0.5rem;
+}
+.stat-label {
+  font-size: 0.85rem; color: rgba(255,255,255,0.65);
+  line-height: 1.6; max-width: 180px; margin: 0 auto;
+}
+.stat-source {
+  font-size: 0.62rem; color: rgba(255,255,255,0.28);
+  margin-top: 0.5rem; font-style: italic;
+}
+
+/* ── PROBLEM ── */
+.problem { background: var(--cream); }
+.problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+.problem-cards { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.problem-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s; cursor: default;
+}
+.problem-card:hover { transform: translateX(6px); box-shadow: 0 6px 24px rgba(13,31,60,0.1); }
+.problem-card.bad .card-icon { background: rgba(239,68,68,0.08); color: var(--red); }
+.problem-card.good .card-icon { background: var(--green-bg); color: var(--green-text); }
+.card-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+}
+.card-text strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+.card-text span { font-size: 0.8rem; color: var(--text-light); }
+.arrow-divider { text-align: center; color: var(--accent); font-size: 1.5rem; margin: 0.25rem 0; }
+.solution-box {
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 2.5rem; border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.solution-box-label {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-light); margin-bottom: 1.5rem;
+}
+.solution-items { display: flex; flex-direction: column; gap: 1.2rem; }
+.solution-item { display: flex; gap: 1rem; align-items: flex-start; }
+.solution-icon {
+  width: 38px; height: 38px; background: var(--cream);
+  border-radius: var(--radius-sm); display: flex;
+  align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1.1rem;
+}
+.solution-item strong { display: block; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.15rem; }
+.solution-item span { font-size: 0.8rem; color: var(--text-mid); }
+
+/* ── REFERENZ ── */
+.referenz { background: var(--white); }
+.referenz-inner { max-width: 1200px; margin: 0 auto; }
+.referenz-intro { max-width: 600px; margin-bottom: 4rem; }
+.before-after {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  gap: 0; align-items: center;
+  background: var(--cream); border-radius: var(--radius-lg);
+  overflow: hidden; border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.ba-panel { padding: 2rem; }
+.ba-label {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem; border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+}
+.ba-label.bad { background: rgba(239,68,68,0.1); color: #dc2626; }
+.ba-label.good { background: var(--green-bg); color: var(--green-text); }
+.ba-mock {
+  border-radius: var(--radius-md); overflow: hidden;
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.ba-mock-bar {
+  padding: 0.5rem 0.8rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.ba-mock-bar.old { background: #d1d5db; }
+.ba-mock-bar.new { background: var(--navy); }
+.ba-mock-dots { display: flex; gap: 3px; }
+.ba-mock-dots span { width: 7px; height: 7px; border-radius: 50%; }
+.ba-mock-bar.old .ba-mock-dots span { background: #9ca3af; }
+.ba-mock-bar.new .ba-mock-dots span:nth-child(1) { background: #ff5f56; }
+.ba-mock-bar.new .ba-mock-dots span:nth-child(2) { background: #ffbd2e; }
+.ba-mock-bar.new .ba-mock-dots span:nth-child(3) { background: #27c93f; }
+.ba-mock-url {
+  flex: 1; height: 18px; border-radius: 3px;
+  font-size: 0.62rem; display: flex; align-items: center;
+  padding: 0 0.5rem;
+}
+.ba-mock-bar.old .ba-mock-url { background: #e5e7eb; color: #6b7280; }
+.ba-mock-bar.new .ba-mock-url { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+.ba-mock-body { padding: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.ba-mock-body.old { background: #f9fafb; }
+.ba-mock-body.new { background: var(--white); }
+.old-hero { height: 60px; background: #6b7280; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.old-hero span { font-size: 0.55rem; color: #d1d5db; font-weight: 600; }
+.new-hero-mini { height: 60px; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.new-hero-mini span { font-size: 0.55rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.old-line { height: 7px; border-radius: 3px; background: #e5e7eb; }
+.new-line { height: 7px; border-radius: 3px; background: var(--cream-warm); }
+.old-line.w60 { width: 60%; }
+.old-line.w80 { width: 80%; }
+.old-line.w45 { width: 45%; }
+.new-line.w70 { width: 70%; }
+.new-line.w85 { width: 85%; }
+.new-line.w55 { width: 55%; }
+.ba-mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.2rem; }
+.old-block { height: 35px; background: #e5e7eb; border-radius: 4px; }
+.new-block { height: 35px; background: var(--cream-warm); border-radius: 4px; }
+.ba-score { display: flex; gap: 0.5rem; margin-top: 0.4rem; flex-wrap: wrap; }
+.score-tag {
+  font-size: 0.6rem; font-weight: 700; padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+}
+.score-tag.red { background: rgba(239,68,68,0.1); color: #dc2626; }
+.score-tag.green { background: var(--green-bg); color: var(--green-text); }
+.ba-caption { margin-top: 1rem; }
+.ba-caption strong { display: block; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
+.ba-caption span { font-size: 0.8rem; color: var(--text-mid); }
+.ba-divider {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.5rem; padding: 1.5rem 0;
+  background: var(--cream-warm);
+  border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+}
+.ba-arrow {
+  font-size: 1.8rem; color: var(--accent);
+  font-family: 'Playfair Display', serif; font-weight: 900;
+}
+.ba-divider span { font-size: 0.65rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; writing-mode: vertical-rl; }
+.referenz-results {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 3rem;
+}
+.result-card {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 1.5rem;
+  text-align: center;
+}
+.result-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; font-weight: 900;
+  color: var(--navy); line-height: 1;
+}
+.result-num span { color: var(--accent); }
+.result-card p { font-size: 0.82rem; color: var(--text-mid); margin-top: 0.4rem; line-height: 1.5; }
+
+/* ── PROCESS ── */
+.process { background: var(--white); }
+.process-inner { max-width: 1200px; margin: 0 auto; }
+.process-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-top: 4rem; position: relative;
+}
+.process-steps::before {
+  content: ''; position: absolute;
+  top: 2rem; left: 12%; right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), var(--border), var(--border), transparent);
+}
+.step { text-align: center; padding: 0 1.5rem; position: relative; z-index: 1; }
+.step-day {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  background: var(--cream); color: var(--accent);
+  padding: 0.2rem 0.7rem; border-radius: var(--radius-pill);
+  margin-bottom: 0.8rem; letter-spacing: 0.05em;
+}
+.step-num {
+  width: 4rem; height: 4rem;
+  background: var(--white); border: 2px solid var(--border);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 900; color: var(--navy);
+  transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+  cursor: default;
+}
+.step:hover .step-num { background: var(--navy); border-color: var(--navy); color: var(--white); transform: scale(1.1); }
+.step h3 { margin-bottom: 0.5rem; }
+.step p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.65; }
+
+/* ── TESTIMONIALS ── */
+.testimonials { background: var(--cream); }
+.testimonials-inner { max-width: 1200px; margin: 0 auto; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+.testi-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+  position: relative; transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+.testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.testi-stars { color: var(--accent); font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.testi-quote {
+  font-size: 0.95rem; color: var(--text-mid);
+  line-height: 1.75; margin-bottom: 1.5rem; font-style: italic;
+}
+.testi-quote::before { content: '„'; color: var(--accent); font-size: 1.4rem; font-style: normal; }
+.testi-author { display: flex; align-items: center; gap: 0.9rem; }
+.testi-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 700; color: var(--white);
+  flex-shrink: 0;
+}
+.testi-avatar.c1 { background: var(--navy); }
+.testi-avatar.c2 { background: var(--navy-mid); }
+.testi-avatar.c3 { background: var(--navy-light); }
+.testi-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+.testi-role { font-size: 0.78rem; color: var(--text-light); }
+.testi-paket {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  font-size: 0.65rem; font-weight: 700;
+  background: var(--cream); color: var(--accent);
+  padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* ── PAKETE ── */
+.pakete { background: var(--white); }
+.pakete-inner { max-width: 1200px; margin: 0 auto; }
+.pakete-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 3.5rem;
+}
+.paket {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2.5rem;
+  position: relative; transition: transform 0.3s, box-shadow 0.3s; cursor: default;
+}
+.paket:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.paket.featured {
+  background: var(--navy); border-color: var(--navy);
+  transform: scale(1.03);
+}
+.paket.featured:hover { transform: scale(1.03) translateY(-6px); }
+.featured-tag {
+  position: absolute; top: -0.9rem; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: var(--white);
+  font-size: 0.7rem; font-weight: 700;
+  padding: 0.3rem 1rem; border-radius: var(--radius-pill);
+  letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+}
+.paket-name { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.8rem; }
+.paket.featured .paket-name { color: var(--accent-light); }
+.paket-price { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--navy); line-height: 1; margin-bottom: 0.3rem; }
+.paket.featured .paket-price { color: var(--white); }
+.paket-price span { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 400; color: var(--text-mid); }
+.paket.featured .paket-price span { color: rgba(255,255,255,0.5); }
+.paket-desc { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.65; }
+.paket.featured .paket-desc { color: rgba(255,255,255,0.6); }
+.paket-features { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+.paket-features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--text-dark); }
+.paket.featured .paket-features li { color: rgba(255,255,255,0.85); }
+.check-icon {
+  width: 18px; height: 18px;
+  background: var(--green-bg); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px; font-size: 0.6rem; color: var(--green-text);
+}
+.paket.featured .check-icon { background: rgba(255,255,255,0.12); color: var(--accent-light); }
+.paket-cta {
+  display: block; text-align: center;
+  background: var(--navy); color: var(--white);
+  padding: 0.95rem; border-radius: var(--radius-pill);
+  text-decoration: none; font-weight: 600; font-size: 0.9rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.paket-cta:hover { background: var(--navy-mid); transform: translateY(-1px); }
+.paket.featured .paket-cta { background: var(--accent); }
+.paket.featured .paket-cta:hover { background: var(--accent-dark); }
+.wartung-strip {
+  background: var(--cream-warm); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem 2.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 2rem; gap: 2rem;
+}
+.wartung-strip h3 { font-size: 1.35rem; }
+.wartung-strip p { font-size: 0.85rem; color: var(--text-mid); margin-top: 0.3rem; }
+.wartung-price { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--navy); white-space: nowrap; }
+.wartung-price span { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 400; color: var(--text-mid); }
+
+/* ── GARANTIE ── */
+.garantie { background: var(--navy); padding: 5rem 4rem; position: relative; overflow: hidden; }
+.garantie::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(200,169,110,0.1) 0%, transparent 70%);
+}
+.garantie-inner {
+  max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 1;
+}
+.garantie-badge {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-pill); padding: 0.6rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.garantie-badge-icon { font-size: 1.8rem; }
+.garantie-badge-text { text-align: left; }
+.garantie-badge-text strong { display: block; font-size: 0.9rem; color: var(--white); font-weight: 600; }
+.garantie-badge-text span { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+.garantie h2 { color: var(--white); margin-bottom: 1.5rem; }
+.garantie p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.75; max-width: 680px; margin: 0 auto 3rem; }
+.garantie-points {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; text-align: left; margin-bottom: 3rem;
+}
+.garantie-point {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md); padding: 1.5rem;
+}
+.garantie-point-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+.garantie-point strong { display: block; font-size: 0.9rem; color: var(--white); margin-bottom: 0.4rem; }
+.garantie-point span { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+/* ── MARKT ── */
+.markt { background: var(--cream); }
+.markt-inner { max-width: 1200px; margin: 0 auto; }
+.markt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; }
+.markt-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: transform 0.2s; cursor: default;
+}
+.markt-card:hover { transform: translateY(-4px); }
+.markt-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, var(--navy), var(--accent));
+}
+.markt-num {
+  font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900;
+  color: var(--navy); line-height: 1; margin-bottom: 0.5rem;
+}
+.markt-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.65; }
+.markt-card .source { font-size: 0.68rem; color: var(--text-light); margin-top: 0.8rem; font-style: italic; }
+
+/* ── FAQ ── */
+.faq { background: var(--white); }
+.faq-inner { max-width: 800px; margin: 0 auto; }
+.faq-grid { margin-top: 4rem; display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); overflow: hidden; }
+.faq-q {
+  padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; font-size: 1rem; font-weight: 600; color: var(--navy);
+  gap: 1rem; user-select: none;
+}
+.faq-q:hover { color: var(--navy-mid); }
+.faq-icon {
+  width: 28px; height: 28px;
+  border: 1.5px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: transform 0.3s, background 0.3s, border-color 0.3s;
+  font-size: 1rem; color: var(--navy);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--navy); border-color: var(--navy); color: var(--white); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.faq-a-inner { padding-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-mid); line-height: 1.8; }
+.faq-item.open .faq-a { max-height: 600px; }
+
+/* ── CTA ── */
+.cta-section {
+  background: var(--navy); padding: 7rem 4rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(200,169,110,0.12) 0%, transparent 70%);
+}
+.cta-section h2 { color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; position: relative; }
+.cta-section > p { color: rgba(255,255,255,0.6); font-size: 1.1rem; max-width: 500px; margin: 0 auto 3rem; line-height: 1.75; position: relative; }
+.cta-box {
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 3rem; max-width: 560px; margin: 0 auto;
+  position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+.cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem; }
+.cta-box > p { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.6; }
+.cta-form { display: flex; flex-direction: column; gap: 0.9rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.cta-form input, .cta-form textarea, .cta-form select {
+  width: 100%; padding: 0.9rem 1.2rem;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+  color: var(--navy); background: var(--cream);
+  outline: none; transition: border-color 0.2s, background 0.2s;
+  resize: none; appearance: none;
+}
+.cta-form input:focus, .cta-form textarea:focus, .cta-form select:focus {
+  border-color: var(--navy); background: var(--white);
+}
+.cta-form textarea { height: 100px; }
+.cta-form button {
+  width: 100%; background: var(--navy); color: var(--white);
+  border: none; padding: 1rem; border-radius: var(--radius-pill);
+  font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: background 0.2s, transform 0.2s;
+}
+.cta-form button:hover { background: var(--navy-mid); transform: translateY(-1px); }
+.form-success {
+  display: none; text-align: center; padding: 2rem;
+}
+.form-success.visible { display: block; }
+.form-success-icon { font-size: 3rem; margin-bottom: 1rem; }
+.form-success h4 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 0.5rem; }
+.form-success p { font-size: 0.9rem; color: var(--text-mid); }
+.cta-alts {
+  display: flex; gap: 1rem; justify-content: center; align-items: center;
+  margin-top: 2rem; flex-wrap: wrap;
+}
+.cta-alt-link {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem; color: rgba(255,255,255,0.6);
+  text-decoration: none; transition: color 0.2s;
+}
+.cta-alt-link:hover { color: var(--accent); }
+.cta-guarantee { display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.75rem; color: var(--text-light); margin-top: 1.2rem; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 3rem 4rem 2rem;
+}
+.footer-main {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem; max-width: 1200px; margin: 0 auto;
+  padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; display: block; text-decoration: none; }
+.footer-logo span { color: var(--accent); }
+.footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 280px; }
+.footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 1.2rem; }
+.footer-links { display: flex; flex-direction: column; gap: 0.7rem; }
+.footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 2rem auto 0;
+  flex-wrap: wrap; gap: 1rem;
+}
+footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+  display: flex; align-items: center; gap: 0.7rem;
+  background: #25d366; color: var(--white);
+  padding: 0.85rem 1.3rem; border-radius: var(--radius-pill);
+  text-decoration: none; font-weight: 600; font-size: 0.9rem;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+.wa-float svg { flex-shrink: 0; }
+.wa-text { white-space: nowrap; }
+
+/* ── MOBILE STICKY CTA ── */
+.sticky-cta {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  background: var(--navy); padding: 1rem 1.5rem;
+  box-shadow: 0 -4px 20px rgba(13,31,60,0.2);
+}
+.sticky-cta a {
+  display: block; text-align: center;
+  background: var(--accent); color: var(--white);
+  padding: 0.9rem; border-radius: var(--radius-pill);
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  transition: background 0.2s;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeLeft { to { opacity: 1; transform: translateY(-50%); } }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── MOBILE ── */
+@media (max-width: 1024px) {
+  .hero-visual { width: 38%; right: 1.5rem; }
+}
+@media (max-width: 900px) {
+  section { padding: 4rem 1.5rem; }
+  nav { padding: 1.2rem 1.5rem; }
+  nav.scrolled { padding: 0.8rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .hero-visual { display: none; }
+  .trust-bar { padding: 1.5rem; }
+  .trust-sep { display: none; }
+  .stats-band { grid-template-columns: 1fr 1fr; padding: 2.5rem 1.5rem; }
+  .stat-item + .stat-item { border-left: none; padding-left: 0; }
+  .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .before-after { grid-template-columns: 1fr; }
+  .ba-divider { flex-direction: row; padding: 1.2rem; border-left: none; border-right: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .ba-divider span { writing-mode: horizontal-tb; }
+  .referenz-results { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .process-steps::before { display: none; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .pakete-grid { grid-template-columns: 1fr; }
+  .paket.featured { transform: scale(1); }
+  .paket.featured:hover { transform: translateY(-6px); }
+  .garantie { padding: 4rem 1.5rem; }
+  .garantie-points { grid-template-columns: 1fr; }
+  .markt-grid { grid-template-columns: 1fr; }
+  .cta-section { padding: 4rem 1.5rem; }
+  .cta-box { padding: 2rem 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+  footer { padding: 2rem 1.5rem 5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cursor, .cursor-follower { display: none; }
+  .wa-float { bottom: 5.5rem; right: 1rem; }
+  .sticky-cta { display: block; }
+  .wartung-strip { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 2.4rem; }
+  .stats-band { grid-template-columns: 1fr; }
+  .trust-bar-inner { gap: 1.2rem; }
+  .process-steps { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="follower"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#problem" onclick="closeMenu()">Das Problem</a>
+  <a href="#prozess" onclick="closeMenu()">Vorgehen</a>
+  <a href="#pakete" onclick="closeMenu()">Preise</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Jetzt anfragen</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo">auffrisch<span>.</span></a>
+  <div class="nav-links">
+    <a href="#prozess">Vorgehen</a>
+    <a href="#pakete">Preise</a>
+    <a href="#testimonials">Referenzen</a>
+    <a href="#faq">FAQ</a>
+    <a href="#kontakt" class="nav-cta">Gespräch buchen</a>
+  </div>
+  <button class="nav-burger" id="burger" onclick="toggleMenu()" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Fixpreis · 7 Tage · Schweizer Qualität
+    </div>
+    <h1>Ihre Website.<br><em>Neu gedacht.</em></h1>
+    <p class="hero-sub">Viele Schweizer Firmen verlieren täglich Kunden, weil ihre Website veraltet ist. Wir ändern das — schnell, zum Fixpreis, ohne technisches Fachwissen Ihrerseits.</p>
+    <div class="hero-checks">
+      <div class="hero-check">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        In 7 Werktagen online
+      </div>
+      <div class="hero-check">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Fixpreis ab CHF 2'900
+      </div>
+      <div class="hero-check">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Kein Technikwissen nötig
+      </div>
+      <div class="hero-check">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        100% Made in Switzerland
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn-primary">
+        Kostenlos beraten lassen
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#pakete" class="btn-ghost">Preise ansehen →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="browser-mock">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">ihr-unternehmen.ch</div>
+      </div>
+      <div class="browser-content">
+        <div class="mock-hero-bar"><div class="mock-tag">✦ Frisch & Modern</div></div>
+        <div class="mock-rows">
+          <div class="mock-row w-70"></div>
+          <div class="mock-row w-85"></div>
+          <div class="mock-row w-50"></div>
+        </div>
+        <div class="mock-cols">
+          <div class="mock-col"></div>
+          <div class="mock-col"></div>
+          <div class="mock-col"></div>
+        </div>
+        <div class="mock-score">✓ Mobil · Google · Schnell</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon">🇨🇭</div>
+      <div><strong>Swiss Made</strong>Entwicklung in der Schweiz</div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <div class="trust-icon">⚡</div>
+      <div><strong>7 Werktage</strong>Von Gespräch bis Go-Live</div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <div class="trust-icon">🔒</div>
+      <div><strong>Fixpreis-Garantie</strong>Keine versteckten Kosten</div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <div class="trust-icon">📱</div>
+      <div><strong>Mobile-First</strong>Perfekt auf dem Handy</div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <div class="trust-icon">🔍</div>
+      <div><strong>Bei Google gefunden</strong>SEO & lokale Suche</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-item reveal">
+    <div class="stat-number">90%</div>
+    <div class="stat-label">der Schweizer KMU-Websites erfüllen grundlegende Anforderungen nicht</div>
+    <div class="stat-source">localsearch / Swisscom, 18'000+ Websites analysiert</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-number">64%</div>
+    <div class="stat-label">aller KMU haben keine eigene Website — dabei googeln 80% der Kunden zuerst</div>
+    <div class="stat-source">KMU Digital Pulse 2025, localsearch & HSLU</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-number">77%</div>
+    <div class="stat-label">der Bevölkerung möchten KMU-Dienste online finden und direkt buchen</div>
+    <div class="stat-source">KMU Digital Pulse 2025, localsearch & HSLU</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-number">7</div>
+    <div class="stat-label">Werktage — und Ihre neue Website ist live. Garantiert.</div>
+    <div class="stat-source">Auffrisch Fixpreis-Versprechen</div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="problem-grid">
+    <div class="reveal">
+      <div class="section-label">Das Problem</div>
+      <h2>Eine veraltete Website<br>kostet täglich Kunden</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">Wer Ihre Website besucht, entscheidet in 8 Sekunden, ob er bleibt oder wegklickt — zur Konkurrenz. Eine Website von 2015 macht heute keinen guten Eindruck mehr.</p>
+      <div class="problem-cards">
+        <div class="problem-card bad">
+          <div class="card-icon">✕</div>
+          <div class="card-text">
+            <strong>Vorher: veraltet & unsichtbar</strong>
+            <span>Nicht fürs Handy optimiert, bei Google nicht gefunden, kein Kontaktformular</span>
+          </div>
+        </div>
+        <div class="arrow-divider">↓</div>
+        <div class="problem-card good">
+          <div class="card-icon">✓</div>
+          <div class="card-text">
+            <strong>Nachher: modern & auffindbar</strong>
+            <span>Auf jedem Gerät top, bei Google vorne, Kunden kontaktieren Sie direkt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="solution-box reveal" style="transition-delay:0.15s">
+      <div class="solution-box-label">Was wir konkret erneuern</div>
+      <div class="solution-items">
+        <div class="solution-item">
+          <div class="solution-icon">📱</div>
+          <div>
+            <strong>Perfekt auf jedem Gerät</strong>
+            <span>Über 70% Ihrer Besucher kommen per Smartphone. Ihre neue Website sieht auf jedem Bildschirm top aus.</span>
+          </div>
+        </div>
+        <div class="solution-item">
+          <div class="solution-icon">🔍</div>
+          <div>
+            <strong>Bei Google gefunden werden</strong>
+            <span>Wir optimieren Ihre Website, damit Kunden in Ihrer Region Sie bei Google finden — ohne teure Werbung.</span>
+          </div>
+        </div>
+        <div class="solution-item">
+          <div class="solution-icon">⚡</div>
+          <div>
+            <strong>Blitzschnell laden</strong>
+            <span>Jede Sekunde Ladezeit kostet 7% der Besucher. Ihre neue Website lädt in unter 2 Sekunden.</span>
+          </div>
+        </div>
+        <div class="solution-item">
+          <div class="solution-icon">📬</div>
+          <div>
+            <strong>Kunden direkt kontaktieren</strong>
+            <span>Kontaktformular, Google Maps, Telefon-Button — Kunden erreichen Sie mit einem Klick.</span>
+          </div>
+        </div>
+        <div class="solution-item">
+          <div class="solution-icon">🗺️</div>
+          <div>
+            <strong>Lokale Sichtbarkeit</strong>
+            <span>Google Maps Einbindung und lokale Suchoptimierung — Sie werden in Ihrer Region gefunden.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZ -->
+<section class="referenz" id="referenz">
+  <div class="referenz-inner">
+    <div class="referenz-intro reveal">
+      <div class="section-label">Echte Resultate</div>
+      <h2>Vorher. Nachher.<br>Der Unterschied ist sichtbar.</h2>
+      <p class="section-sub">Was aus einer veralteten Website werden kann — in 7 Tagen. Kein Fachwissen nötig, kein Aufwand Ihrer­seits.</p>
+    </div>
+    <div class="before-after reveal" style="transition-delay:0.15s">
+      <div class="ba-panel">
+        <div class="ba-label bad">✕ Vorher</div>
+        <div class="ba-mock">
+          <div class="ba-mock-bar old">
+            <div class="ba-mock-dots"><span></span><span></span><span></span></div>
+            <div class="ba-mock-url">joshele.ch</div>
+          </div>
+          <div class="ba-mock-body old">
+            <div class="old-hero"><span>WILLKOMMEN</span></div>
+            <div class="old-line w80"></div>
+            <div class="old-line w60"></div>
+            <div class="old-line w45"></div>
+            <div class="ba-mock-grid">
+              <div class="old-block"></div>
+              <div class="old-block"></div>
+            </div>
+            <div class="ba-score">
+              <span class="score-tag red">✕ Nicht mobil</span>
+              <span class="score-tag red">✕ Kein SSL</span>
+              <span class="score-tag red">✕ Google: nicht gefunden</span>
+            </div>
+          </div>
+        </div>
+        <div class="ba-caption">
+          <strong>Joshele.ch — vorher</strong>
+          <span>Veraltet, nicht mobil, bei Google unsichtbar</span>
+        </div>
+      </div>
+      <div class="ba-divider">
+        <div class="ba-arrow">→</div>
+        <span>7 Tage</span>
+      </div>
+      <div class="ba-panel">
+        <div class="ba-label good">✓ Nachher</div>
+        <div class="ba-mock">
+          <div class="ba-mock-bar new">
+            <div class="ba-mock-dots"><span></span><span></span><span></span></div>
+            <div class="ba-mock-url">🔒 joshele.ch</div>
+          </div>
+          <div class="ba-mock-body new">
+            <div class="new-hero-mini"><span>✦ Frisch & Modern</span></div>
+            <div class="new-line w85"></div>
+            <div class="new-line w70"></div>
+            <div class="new-line w55"></div>
+            <div class="ba-mock-grid">
+              <div class="new-block"></div>
+              <div class="new-block"></div>
+            </div>
+            <div class="ba-score">
+              <span class="score-tag green">✓ Mobile-First</span>
+              <span class="score-tag green">✓ SSL & Schnell</span>
+              <span class="score-tag green">✓ Google: Seite 1</span>
+            </div>
+          </div>
+        </div>
+        <div class="ba-caption">
+          <strong>Joshele.ch — nachher</strong>
+          <span>Modern, mobil, bei Google auf Seite 1</span>
+        </div>
+      </div>
+    </div>
+    <div class="referenz-results">
+      <div class="result-card reveal">
+        <div class="result-num">+<span>210</span>%</div>
+        <p>mehr Besucher über Google in den ersten 3 Monaten nach dem Relaunch</p>
+      </div>
+      <div class="result-card reveal" style="transition-delay:0.1s">
+        <div class="result-num"><span>4.8</span>×</div>
+        <p>mehr Kontaktanfragen über das neue Formular pro Monat</p>
+      </div>
+      <div class="result-card reveal" style="transition-delay:0.2s">
+        <div class="result-num"><span>7</span></div>
+        <p>Werktage vom ersten Gespräch bis zur fertigen, live geschalteten Website</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="prozess">
+  <div class="process-inner">
+    <div class="reveal">
+      <div class="section-label">So läuft es ab</div>
+      <h2>Vier Schritte.<br>Eine neue Website.</h2>
+      <p class="section-sub">Sie müssen nichts Technisches wissen. Wir führen Sie Schritt für Schritt durch den Prozess — vom ersten Gespräch bis zum Launch.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal" style="transition-delay:0s">
+        <div class="step-day">Tag 1</div>
+        <div class="step-num">1</div>
+        <h3>Kennenlernen</h3>
+        <p>Ein kurzes Gespräch — kostenlos, unverbindlich. Wir hören zu, was Sie möchten und was Ihre Kunden brauchen.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:0.1s">
+        <div class="step-day">Tag 2–3</div>
+        <div class="step-num">2</div>
+        <h3>Ihr Entwurf</h3>
+        <p>Sie erhalten einen ersten Design-Entwurf Ihrer neuen Website zur Ansicht. Gefällt etwas nicht? Wir ändern es.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:0.2s">
+        <div class="step-day">Tag 4–6</div>
+        <div class="step-num">3</div>
+        <h3>Fertigstellung</h3>
+        <p>Wir bauen die Website, fügen Ihre Inhalte ein und stellen sicher, dass Sie bei Google gefunden werden.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:0.3s">
+        <div class="step-day">Tag 7</div>
+        <div class="step-num">4</div>
+        <h3>Go-Live</h3>
+        <p>Ihre Website geht online. Sie bekommen eine Einführung, wie Sie Inhalte selbst ändern können — falls gewünscht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="reveal">
+      <div class="section-label">Was unsere Kunden sagen</div>
+      <h2>Echte Stimmen.<br>Echte Resultate.</h2>
+      <p class="section-sub">Schweizer KMU-Inhaber, die ihre Website bei uns erneuert haben — in ihren eigenen Worten.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal" style="transition-delay:0s">
+        <div class="testi-paket">Komplett-Paket</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Ich war skeptisch, ob sich das lohnt. Heute kommen 60% meiner Neukunden über die Website. Früher hat mich kaum jemand gefunden. Der Prozess war unkompliziert — ich musste fast nichts selber machen."</p>
+        <div class="testi-author">
+          <div class="testi-avatar c1">BM</div>
+          <div>
+            <div class="testi-name">Beat Müller</div>
+            <div class="testi-role">Müller Schreinerei GmbH, Bern</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.1s">
+        <div class="testi-paket">Starter-Paket</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Als Einzelperson hatte ich nie Zeit, mich um die Website zu kümmern. Auffrisch hat mir in einer Woche einen professionellen Online-Auftritt gemacht. Meine Patienten finden mich jetzt bei Google."</p>
+        <div class="testi-author">
+          <div class="testi-avatar c2">SZ</div>
+          <div>
+            <div class="testi-name">Sandra Zbinden</div>
+            <div class="testi-role">Naturheilpraxis, Zürich</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.2s">
+        <div class="testi-paket">Online-Präsenz-Paket</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Unser Restaurant war auf Google kaum sichtbar. Seit der neuen Website bekommen wir regelmässig Tischreservierungen direkt über die Seite. Das hat unsere Auslastung spürbar verbessert."</p>
+        <div class="testi-author">
+          <div class="testi-avatar c3">MP</div>
+          <div>
+            <div class="testi-name">Marco Pellegrini</div>
+            <div class="testi-role">Ristorante Pellegrini, Lugano</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKETE -->
+<section class="pakete" id="pakete">
+  <div class="pakete-inner">
+    <div class="reveal">
+      <div class="section-label">Transparente Preise</div>
+      <h2>Fixpreise.<br>Keine versteckten Kosten.</h2>
+      <p class="section-sub">Kein Stundensatz, keine Überraschungsrechnung. Sie wissen von Anfang an, was Sie zahlen.</p>
+    </div>
+    <div class="pakete-grid">
+      <div class="paket reveal" style="transition-delay:0s">
+        <div class="paket-name">Starter</div>
+        <div class="paket-price">CHF 2'900<span> / einmalig</span></div>
+        <div class="paket-desc">Für Selbstständige und Kleinbetriebe, die schnell und günstig online sichtbar sein möchten.</div>
+        <ul class="paket-features">
+          <li><div class="check-icon">✓</div> Eine Seite, modern & mobil-optimiert</li>
+          <li><div class="check-icon">✓</div> Kontaktformular & Telefon-Button</li>
+          <li><div class="check-icon">✓</div> Google Maps Integration</li>
+          <li><div class="check-icon">✓</div> Basis-Suchmaschinenoptimierung</li>
+          <li><div class="check-icon">✓</div> Sicherheitszertifikat (SSL) inklusive</li>
+          <li><div class="check-icon">✓</div> 1 Anpassungsrunde nach Ihren Wünschen</li>
+          <li><div class="check-icon">✓</div> Einrichtung auf Ihrem Domain</li>
+        </ul>
+        <a href="#kontakt" class="paket-cta">Jetzt anfragen</a>
+      </div>
+      <div class="paket featured reveal" style="transition-delay:0.15s">
+        <div class="featured-tag">⭐ Meistgewählt</div>
+        <div class="paket-name">Komplett</div>
+        <div class="paket-price">CHF 4'900<span> / einmalig</span></div>
+        <div class="paket-desc">Für KMU, die einen vollständigen, professionellen Webauftritt mit mehreren Seiten möchten.</div>
+        <ul class="paket-features">
+          <li><div class="check-icon">✓</div> Mehrere Seiten (bis zu 8 Seiten)</li>
+          <li><div class="check-icon">✓</div> Individuelles Design mit Ihrem Logo & Farben</li>
+          <li><div class="check-icon">✓</div> Vollständige Suchmaschinenoptimierung</li>
+          <li><div class="check-icon">✓</div> Lokale Sichtbarkeit (Google Maps & lokale Suche)</li>
+          <li><div class="check-icon">✓</div> Kontaktformular, Telefon, Google Maps</li>
+          <li><div class="check-icon">✓</div> Technische Optimierung (Ladezeit, Sicherheit)</li>
+          <li><div class="check-icon">✓</div> 1 Anpassungsrunde inklusive</li>
+          <li><div class="check-icon">✓</div> Persönliche Einführung nach dem Launch</li>
+        </ul>
+        <a href="#kontakt" class="paket-cta">Jetzt anfragen</a>
+      </div>
+      <div class="paket reveal" style="transition-delay:0.3s">
+        <div class="paket-name">Online Präsenz</div>
+        <div class="paket-price">CHF 6'900<span> / einmalig</span></div>
+        <div class="paket-desc">Website und Social Media aus einer Hand — Ihr gesamter digitaler Auftritt, einheitlich und professionell.</div>
+        <ul class="paket-features">
+          <li><div class="check-icon">✓</div> Alles aus dem Komplett-Paket</li>
+          <li><div class="check-icon">✓</div> Instagram-Profil eingerichtet & optimiert</li>
+          <li><div class="check-icon">✓</div> LinkedIn-Profil professionell gestaltet</li>
+          <li><div class="check-icon">✓</div> Einheitliches Design auf allen Kanälen</li>
+          <li><div class="check-icon">✓</div> Bild- und Text-Vorlagen zum Selbst-Posten</li>
+          <li><div class="check-icon">✓</div> Schritt-für-Schritt Anleitung zur Pflege</li>
+        </ul>
+        <a href="#kontakt" class="paket-cta">Jetzt anfragen</a>
+      </div>
+    </div>
+    <div class="wartung-strip reveal">
+      <div>
+        <h3>Optionale Jahrespflege</h3>
+        <p>Wir halten Ihre Website aktuell: technische Updates, Inhalte ändern, Sicherheit überwachen. Sie kümmern sich um Ihr Geschäft, wir um Ihre Website.</p>
+      </div>
+      <div class="wartung-price">CHF 990<span> / Jahr</span></div>
+      <a href="#kontakt" class="btn-primary" style="white-space:nowrap">Mehr erfahren</a>
+    </div>
+    <p class="reveal" style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:var(--text-light);">
+      Domain und Hosting (ca. CHF 100–200 / Jahr) kommen separat — wir klären das transparent im ersten Gespräch.
+    </p>
+  </div>
+</section>
+
+<!-- GARANTIE -->
+<section class="garantie" id="garantie">
+  <div class="garantie-inner">
+    <div class="garantie-badge reveal">
+      <div class="garantie-badge-icon">🛡️</div>
+      <div class="garantie-badge-text">
+        <strong>Das Auffrisch-Versprechen</strong>
+        <span>Unsere Garantien für Ihre Sicherheit</span>
+      </div>
+    </div>
+    <h2 class="reveal">Kein Risiko.<br>Nur Resultate.</h2>
+    <p class="reveal">Wir wissen, dass viele KMU-Inhaber schlechte Erfahrungen mit Web-Agenturen gemacht haben: überteuert, ewig lange Projekte, keine Ergebnisse. Bei Auffrisch ist das anders — wir stehen zu unserem Wort.</p>
+    <div class="garantie-points">
+      <div class="garantie-point reveal" style="transition-delay:0s">
+        <div class="garantie-point-icon">📅</div>
+        <strong>7-Tage-Garantie</strong>
+        <span>Ihre neue Website ist innerhalb von 7 Werktagen live — oder wir arbeiten kostenlos weiter bis sie es ist.</span>
+      </div>
+      <div class="garantie-point reveal" style="transition-delay:0.1s">
+        <div class="garantie-point-icon">💰</div>
+        <strong>Fixpreis-Garantie</strong>
+        <span>Der vereinbarte Preis ist final. Kein Stundensatz, keine Nachforderungen, keine bösen Überraschungen.</span>
+      </div>
+      <div class="garantie-point reveal" style="transition-delay:0.2s">
+        <div class="garantie-point-icon">✏️</div>
+        <strong>Anpassungsrunde inklusive</strong>
+        <span>Eine vollständige Überarbeitungsrunde ist in jedem Paket inklusive. Gefällt etwas nicht? Wir ändern es.</span>
+      </div>
+    </div>
+    <a href="#kontakt" class="btn-accent reveal">Jetzt kostenlos beraten lassen →</a>
+  </div>
+</section>
+
+<!-- MARKT -->
+<section class="markt" id="markt">
+  <div class="markt-inner">
+    <div class="reveal">
+      <div class="section-label">Warum jetzt handeln</div>
+      <h2>Die Zahlen sprechen<br>für sich.</h2>
+      <p class="section-sub">Schweizer KMU haben einen grossen digitalen Rückstand — und damit eine grosse Chance, sich von der Konkurrenz abzuheben.</p>
+    </div>
+    <div class="markt-grid">
+      <div class="markt-card reveal">
+        <div class="markt-num">90%</div>
+        <p>der Schweizer KMU-Websites erfüllen grundlegende Anforderungen nicht. Fast jede dritte ist nicht einmal für das Smartphone optimiert.</p>
+        <div class="source">localsearch / Swisscom Directories — Analyse von 18'000+ Websites</div>
+      </div>
+      <div class="markt-card reveal" style="transition-delay:0.15s">
+        <div class="markt-num">77%</div>
+        <p>der Schweizer Bevölkerung möchten KMU-Dienstleistungen online suchen und direkt buchen können — aber nur 3% aller KMU bieten das an.</p>
+        <div class="source">KMU Digital Pulse 2025 — localsearch & Hochschule Luzern</div>
+      </div>
+      <div class="markt-card reveal" style="transition-delay:0.3s">
+        <div class="markt-num">80%</div>
+        <p>der Kunden googeln zuerst, bevor sie ein lokales Unternehmen kontaktieren oder besuchen. Wer online nicht sichtbar ist, wird schlicht nicht gefunden.</p>
+        <div class="source">KMU Digital Pulse 2025 — localsearch & Hochschule Luzern</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="reveal">
+      <div class="section-label">Häufige Fragen</div>
+      <h2>Was Sie wissen möchten</h2>
+      <p class="section-sub">Klare Antworten, ohne Fachjargon.</p>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was passiert mit meiner alten Website?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Ihre alte Website bleibt während des gesamten Prozesses online. Wir bauen die neue Version parallel auf — und erst wenn Sie vollständig zufrieden sind, machen wir den Wechsel. Ohne Ausfallzeit, ohne Risiko.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was brauche ich, um zu starten?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Nur ein kurzes Gespräch mit uns. Falls Sie Texte und Bilder haben — gut. Falls nicht, helfen wir Ihnen dabei. Logo, Farben und Stil besprechen wir gemeinsam. Kein technisches Vorwissen nötig.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Kann ich die Website danach selbst bearbeiten?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Ja. Auf Wunsch richten wir ein einfaches System ein, mit dem Sie Texte und Bilder selbst ändern können — ganz ohne technische Kenntnisse. Alternativ übernehmen wir die Pflege für CHF 990 pro Jahr.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Sind 7 Werktage wirklich realistisch?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Ja — wenn wir Texte und Bilder von Ihrer Seite rasch erhalten. Der häufigste Grund für längere Projekte ist das Warten auf Kundenmaterialien. Wir legen deshalb von Anfang an gemeinsam fest, was wann kommt.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was kostet mich das wirklich — gibt es Folgekosten?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Der Fixpreis für die Website ist alles — keine Stundensätze, keine Überraschungsrechnungen. Zusätzlich fallen jährlich ca. CHF 100–200 für Domain und Hosting an (wie Miete für Ihre Adresse im Internet). Das klären wir transparent im ersten Gespräch. Die optionale Jahrespflege kostet CHF 990 — ist aber nicht Pflicht.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Für welche Branchen eignet sich Auffrisch?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Wir arbeiten mit allen lokalen Schweizer KMU: Handwerker, Therapeuten, Restaurants, Detailhandel, Coiffeure, Dienstleister und viele mehr. Je lokaler und persönlicher das Geschäft, desto grösser der Effekt einer professionellen Website.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Wie läuft die Bezahlung ab?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Wir verlangen 50% bei Auftragserteilung und 50% bei der Abnahme der fertigen Website — wenn Sie zufrieden sind. Per Rechnung oder E-Banking, ganz unkompliziert.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was, wenn ich mit dem Resultat nicht zufrieden bin?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Eine vollständige Anpassungsrunde ist in jedem Paket inklusive — Sie sagen uns, was geändert werden soll, wir setzen es um. Unser Ziel ist, dass Sie vollständig zufrieden sind, bevor Sie die zweite Hälfte zahlen.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="kontakt">
+  <h2>Bereit für Ihre<br><em>neue Website?</em></h2>
+  <p>Kostenloses Erstgespräch — kein Druck, keine Verpflichtung. Wir schauen gemeinsam, was für Sie sinnvoll ist.</p>
+  <div class="cta-box">
+    <h3>Nachricht senden</h3>
+    <p>Oder direkt: <a href="mailto:web@auffrisch.ch" style="color:var(--navy);font-weight:600;">web@auffrisch.ch</a></p>
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">✅</div>
+      <h4>Nachricht erhalten!</h4>
+      <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen. Danke für Ihr Interesse.</p>
+    </div>
+    <form class="cta-form" id="contactForm" action="https://formspree.io/f/XXXXXXXX" method="POST" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Ihr Name" required>
+        <input type="text" name="firma" placeholder="Ihre Firma">
+      </div>
+      <div class="form-row">
+        <input type="email" name="email" placeholder="E-Mail Adresse" required>
+        <input type="tel" name="telefon" placeholder="Telefon (optional)">
+      </div>
+      <select name="paket">
+        <option value="" disabled selected>Welches Paket interessiert Sie?</option>
+        <option value="starter">Starter — CHF 2'900</option>
+        <option value="komplett">Komplett — CHF 4'900 (empfohlen)</option>
+        <option value="praesenz">Online Präsenz — CHF 6'900</option>
+        <option value="wartung">Nur Jahrespflege — CHF 990/Jahr</option>
+        <option value="unbekannt">Weiss noch nicht</option>
+      </select>
+      <input type="url" name="website" placeholder="Ihre aktuelle Website (falls vorhanden)">
+      <textarea name="nachricht" placeholder="Was möchten Sie erneuern? Was ist Ihnen wichtig?"></textarea>
+      <button type="submit">Kostenlos anfragen →</button>
+    </form>
+    <div class="cta-guarantee">
+      <span>🔒</span> Kein Spam · Keine Verpflichtung · Antwort innert 24h
+    </div>
+  </div>
+  <div class="cta-alts">
+    <a href="mailto:web@auffrisch.ch" class="cta-alt-link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      web@auffrisch.ch
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <a href="/" class="footer-logo">auffrisch<span>.</span></a>
+      <p class="footer-tagline">Website-Erneuerung für Schweizer KMU. Modern, mobil, bei Google gefunden — in 7 Tagen.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <div class="footer-links">
+        <a href="#problem">Das Problem</a>
+        <a href="#referenz">Referenzen</a>
+        <a href="#prozess">Vorgehen</a>
+        <a href="#pakete">Preise</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Rechtliches</h4>
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="mailto:web@auffrisch.ch">web@auffrisch.ch</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="copyright">© 2026 Auffrisch · Schweizer Qualität · 100% Made in Switzerland</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/41XXXXXXXXX?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20neue%20Website." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="wa-text">WhatsApp</span>
+</a>
+
+<!-- MOBILE STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#kontakt">Kostenlos beraten lassen →</a>
+</div>
+
+<script>
+// ── CURSOR ──
+const cursor = document.getElementById('cursor');
+const follower = document.getElementById('follower');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  follower.style.left = e.clientX + 'px';
+  follower.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a, button, .paket, .step, .problem-card, .faq-q, .testi-card, .markt-card').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+    cursor.style.background = 'var(--accent)';
+    follower.style.borderColor = 'var(--accent)';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+    cursor.style.background = 'var(--navy)';
+    follower.style.borderColor = 'var(--navy)';
+  });
+});
+
+// ── NAV ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('burger');
+  const open = menu.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SCROLL REVEAL ──
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ── COUNTER ANIMATION ──
+function animateCounter(el, target, suffix) {
+  let start = null;
+  const duration = 1800;
+  const step = ts => {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const text = e.target.textContent.trim();
+      const num = parseInt(text);
+      const suffix = text.replace(String(num), '');
+      animateCounter(e.target, num, suffix);
+      statObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number').forEach(el => statObs.observe(el));
+
+// ── FAQ ──
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── FORM ──
+function handleSubmit(e) {
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  if (form.action.includes('XXXXXXXX')) {
+    e.preventDefault();
+    form.style.display = 'none';
+    success.classList.add('visible');
+    return;
+  }
+  form.addEventListener('submit', () => {
+    setTimeout(() => {
+      form.style.display = 'none';
+      success.classList.add('visible');
+    }, 500);
+  });
+}
+
+// ── STICKY CTA (hide when kontakt in view) ──
+const kontakt = document.getElementById('kontakt');
+const stickyObs = new IntersectionObserver(entries => {
+  const stickyCta = document.getElementById('stickyCta');
+  if (entries[0].isIntersecting) {
+    stickyCta.style.display = 'none';
+  } else {
+    stickyCta.style.display = '';
+  }
+}, { threshold: 0.1 });
+if (kontakt) stickyObs.observe(kontakt);
+</script>
+</body>
+</html>

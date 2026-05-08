@@ -756,6 +756,32 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 }
 .haltung-text p:last-child { margin-bottom: 0; }
 
+/* ── UEBER UNS ── */
+.ueber-uns { background: var(--cream); }
+.ueber-uns-inner { max-width: 860px; margin: 0 auto; }
+.ueber-uns-text { margin-top: 2.5rem; }
+.ueber-uns-text p { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; max-width: 720px; margin-bottom: 1.4rem; }
+.ueber-uns-text p:last-child { margin-bottom: 0; }
+.ueber-uns-convictions { margin-top: 3rem; }
+.conviction-item {
+  display: flex; gap: 1.5rem; align-items: baseline;
+  padding: 1.4rem 0; border-top: 1px solid var(--border);
+}
+.conviction-item:last-child { border-bottom: 1px solid var(--border); }
+.conviction-num {
+  font-family: 'Playfair Display', serif; font-size: 0.8rem; font-weight: 700;
+  color: var(--accent); letter-spacing: 0.06em; flex-shrink: 0; min-width: 2rem;
+}
+.conviction-text { font-size: 1rem; color: var(--text-dark); line-height: 1.65; font-weight: 500; }
+
+/* ── PROZESS TECH LINK ── */
+.prozess-techlink { text-align: center; padding-top: 3rem; }
+.prozess-techlink a {
+  font-size: 0.9rem; color: var(--text-mid); text-decoration: none;
+  transition: color 0.2s; border-bottom: 1px solid transparent;
+}
+.prozess-techlink a:hover { color: var(--navy); border-bottom-color: var(--border); }
+
 /* ── MOBILE ── */
 @media (max-width: 1024px) {
   .hero-visual { width: 38%; right: 1.5rem; }
@@ -806,11 +832,11 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#problem" onclick="closeMenu()">Das Problem</a>
   <a href="#prozess" onclick="closeMenu()">Vorgehen</a>
-  <a href="#pakete" onclick="closeMenu()">Preise</a>
-  <a href="#faq" onclick="closeMenu()">FAQ</a>
-  <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Jetzt anfragen</a>
+  <a href="technologie.html" onclick="closeMenu()">Technologie</a>
+  <a href="#ueber-uns" onclick="closeMenu()">Über uns</a>
+  <a href="#pakete" onclick="closeMenu()">Pakete</a>
+  <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Kontakt</a>
 </div>
 
 <!-- NAV -->
@@ -818,9 +844,10 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <a href="/" class="nav-logo">auffrisch<span>.</span></a>
   <div class="nav-links">
     <a href="#prozess">Vorgehen</a>
-    <a href="#pakete">Preise</a>
-    <a href="#faq">FAQ</a>
-    <a href="#kontakt" class="nav-cta">Gespräch buchen</a>
+    <a href="technologie.html">Technologie</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#pakete">Pakete</a>
+    <a href="#kontakt" class="nav-cta">Kontakt</a>
   </div>
   <button class="nav-burger" id="burger" onclick="toggleMenu()" aria-label="Menü öffnen">
     <span></span><span></span><span></span>
@@ -849,7 +876,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       </div>
       <div class="hero-check">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Begleitung per Zoom
+        Digitaler Austausch
       </div>
       <div class="hero-check">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1050,7 +1077,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="reveal">
       <div class="section-label">So läuft es ab</div>
       <h2>Vier Schritte.<br>Volle Kontrolle.</h2>
-      <p class="section-sub">Sie müssen nichts Technisches wissen. Wir führen Sie durch jeden Schritt — transparent, pünktlich, per Zoom. Sie entscheiden, wir setzen um.</p>
+      <p class="section-sub">Sie müssen nichts Technisches wissen. Wir führen Sie durch jeden Schritt — transparent, pünktlich, per Videocall. Sie entscheiden, wir setzen um.</p>
     </div>
     <div class="process-steps">
       <div class="step reveal" style="transition-delay:0s">
@@ -1063,7 +1090,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="step-day">Tag 5</div>
         <div class="step-num">2</div>
         <h3>Ihr Entwurf</h3>
-        <p>Sie erhalten einen ersten Design-Entwurf zur Ansicht — per Zoom besprechen wir ihn gemeinsam. Gefällt etwas nicht? Sie entscheiden, wir passen an.</p>
+        <p>Sie erhalten einen ersten Design-Entwurf zur Ansicht — per Videocall besprechen wir ihn gemeinsam. Gefällt etwas nicht? Sie entscheiden, wir passen an.</p>
       </div>
       <div class="step reveal" style="transition-delay:0.2s">
         <div class="step-day">Tag 8–9</div>
@@ -1075,7 +1102,37 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <div class="step-day">Tag 11–14</div>
         <div class="step-num">4</div>
         <h3>Go-Live</h3>
-        <p>Ihre Website geht live. Sie erhalten eine persönliche Einführung per Zoom — und können Inhalte bei Bedarf selbst pflegen. Ohne Technikwissen.</p>
+        <p>Ihre Website geht live. Sie erhalten eine persönliche Einführung per Videocall — und können Inhalte bei Bedarf selbst pflegen. Ohne Technikwissen.</p>
+      </div>
+    </div>
+    <div class="prozess-techlink reveal">
+      <a href="technologie.html">Welche Technologien und Methoden dahinterstecken →</a>
+    </div>
+  </div>
+</section>
+
+<!-- UEBER UNS -->
+<section class="ueber-uns" id="ueber-uns">
+  <div class="ueber-uns-inner">
+    <div class="reveal">
+      <div class="section-label">Über uns</div>
+      <h2>Nicht einfach<br>moderner aussehen.</h2>
+    </div>
+    <div class="ueber-uns-text reveal" style="transition-delay:0.15s">
+      <p>Auffrisch ist kein klassisches Webdesign-Studio. Wir glauben, dass ein digitaler Auftritt nicht einfach zeitgemäss aussehen muss — er muss zeigen, was eine Firma wirklich ist. Viele Schweizer Unternehmen haben über Jahre etwas Substanzielles aufgebaut. Ihre Website erzählt das noch nicht. Das ändern wir.</p>
+    </div>
+    <div class="ueber-uns-convictions reveal" style="transition-delay:0.25s">
+      <div class="conviction-item">
+        <span class="conviction-num">01</span>
+        <span class="conviction-text">Wir beginnen jedes Projekt mit der Frage: Wen wollen Sie beeindrucken?</span>
+      </div>
+      <div class="conviction-item">
+        <span class="conviction-num">02</span>
+        <span class="conviction-text">Wir bauen keine Templates. Jede Website ist auf ein konkretes Unternehmen zugeschnitten.</span>
+      </div>
+      <div class="conviction-item">
+        <span class="conviction-num">03</span>
+        <span class="conviction-text">Wir messen Erfolg nicht an Animationen — sondern daran, ob Sie die URL wieder gerne verschicken.</span>
       </div>
     </div>
   </div>
@@ -1167,7 +1224,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       </div>
     </div>
     <h2 class="reveal">Was wir versprechen.<br>Was wir halten.</h2>
-    <p class="reveal">Wir kennen die Skepsis gegenüber Webagenturen. Zu viele Versprechen, zu wenig Verbindlichkeit. Bei Auffrisch ist der Preis fix, der Zeitplan klar — und Sie zahlen die zweite Hälfte erst, wenn Sie zufrieden sind.</p>
+    <p class="reveal">Wir kennen die Skepsis gegenüber Webagenturen. Zu viele Versprechen, zu wenig Verbindlichkeit. Bei Auffrisch ist der Preis fix, der Zeitplan klar — und Sie zahlen erst nach dem Launch, wenn Sie zufrieden sind.</p>
     <div class="garantie-points">
       <div class="garantie-point reveal" style="transition-delay:0s">
         <div class="garantie-point-icon">
@@ -1300,7 +1357,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
           <div class="faq-icon">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          Wir verlangen 50% bei Auftragserteilung und 50% bei der Abnahme der fertigen Website — wenn Sie zufrieden sind. Per Rechnung oder E-Banking, ganz unkompliziert.
+          Sie zahlen nach dem Launch — wenn Ihre Website live ist und Sie zufrieden sind. Per Rechnung oder E-Banking, ganz unkompliziert.
         </div></div>
       </div>
       <div class="faq-item">
@@ -1309,7 +1366,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
           <div class="faq-icon">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          Eine vollständige Anpassungsrunde ist in jedem Paket inklusive — Sie sagen uns, was geändert werden soll, wir setzen es um. Unser Ziel ist, dass Sie vollständig zufrieden sind, bevor Sie die zweite Hälfte zahlen.
+          Eine vollständige Anpassungsrunde ist in jedem Paket inklusive — Sie sagen uns, was geändert werden soll, wir setzen es um. Unser Ziel ist, dass Sie vollständig zufrieden sind, bevor wir abschliessen.
         </div></div>
       </div>
     </div>
@@ -1319,7 +1376,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 <!-- CTA -->
 <section class="cta-section" id="kontakt">
   <h2>Ihr Auftritt.<br><em>Wie er sein sollte.</em></h2>
-  <p>Ein kurzes Gespräch via MS Teams oder Zoom — kostenlos, unverbindlich. Wir hören zu, was Ihnen wichtig ist.</p>
+  <p>Ein kurzes Gespräch per Videocall — kostenlos, unverbindlich. Wir hören zu, was Ihnen wichtig ist.</p>
   <div class="cta-box">
     <h3>Nachricht senden</h3>
     <p>Oder direkt: <a href="mailto:web@auffrisch.ch" style="color:var(--navy);font-weight:600;">web@auffrisch.ch</a></p>
@@ -1333,7 +1390,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <h4>Nachricht erhalten!</h4>
       <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen. Danke für Ihr Interesse.</p>
     </div>
-    <form class="cta-form" id="contactForm" action="https://formspree.io/f/XXXXXXXX" method="POST" onsubmit="handleSubmit(event)">
+    <form class="cta-form" id="contactForm" action="https://formspree.io/f/mjgleynv" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <input type="text" name="name" placeholder="Ihr Name" required>
         <input type="text" name="firma" placeholder="Ihre Firma">
@@ -1388,7 +1445,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
         <a href="/impressum.html">Impressum</a>
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="mailto:web@auffrisch.ch">web@auffrisch.ch</a>
-        <a href="/technologie.html" style="margin-top:0.4rem; opacity:0.6;">Technologie &amp; Methode →</a>
       </div>
     </div>
   </div>

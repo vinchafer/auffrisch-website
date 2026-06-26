@@ -4,3 +4,6 @@ Thumbs.db
 .env
 
 .vercel
+
+__pycache__/
+*.pyc

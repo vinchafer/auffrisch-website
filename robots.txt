@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://auffrisch.ch/sitemap.xml
+
+# Verzeichnisse ausschliessen
+Disallow: /.vercel/
+Disallow: /.git/

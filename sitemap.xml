@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://auffrisch.ch/</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/technologie.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/technologie.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/website-erneuern-schweiz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/website-erneuern-schweiz.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/webauftritt-fixpreis.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/webauftritt-fixpreis.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/webdesign-kmu-schweiz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/webdesign-kmu-schweiz.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/professionelle-website-kmu.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/professionelle-website-kmu.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/website-kmu-zuerich.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://auffrisch.ch/website-kmu-zuerich.html"/>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/impressum.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://auffrisch.ch/datenschutz.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

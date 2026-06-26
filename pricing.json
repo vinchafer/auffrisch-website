@@ -1,0 +1,11 @@
+{
+  "_comment": "SINGLE SOURCE OF TRUTH fuer alle Preise der Auffrisch-Landingpage. Werte hier aendern, dann `python build_pricing.py` ausfuehren - das injiziert die Betraege statisch in alle HTML-Dateien (Karten, Dropdown, SEO-Text, FAQ, JSON-LD, Meta/OG/Twitter) in DE/EN/FR/IT. Karten/Fliesstext-Format: CHF mit Hochkomma-Tausender (z.B. 1'500). JSON-LD/lowPrice/highPrice/priceRange: rohe Zahl. low/high/priceRange werden aus starter/komplett/online_praesenz abgeleitet (min/max).",
+  "currency": "CHF",
+  "tiers": {
+    "starter":         { "amount": 1500, "pages": 5 },
+    "komplett":        { "amount": 3500, "pages": 10 },
+    "online_praesenz": { "amount": 5900 },
+    "jahrespflege":    { "amount": 990, "note": "unveraendert - nicht vom Generator angefasst" },
+    "domain_hosting":  { "amount": 100, "note": "ca.-Wert, unveraendert - nicht vom Generator angefasst" }
+  }
+}

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Refonte de site web Suisse – Webdesign PME prix fixe | auffrisch.ch</title>
-<meta name="description" content="Auffrisch rénove les sites web des PME suisses : webdesign professionnel à prix fixe dès CHF 2'900, en ligne en 14 jours ouvrables. Aucune surprise. Prenez rendez-vous gratuitement.">
+<meta name="description" content="Auffrisch rénove les sites web des PME suisses : webdesign professionnel à prix fixe dès CHF 1'500, en ligne en 14 jours ouvrables. Aucune surprise. Prenez rendez-vous gratuitement.">
 <meta name="keywords" content="refonte site web Suisse, site web PME Suisse, webdesign PME Suisse, prix fixe site web, création site web PME, site web professionnel Suisse, renouvellement site web">
 <link rel="canonical" href="https://auffrisch.ch/fr/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://auffrisch.ch/fr/">
 <meta property="og:title" content="Refonte de site web Suisse – Webdesign PME prix fixe | auffrisch.ch">
-<meta property="og:description" content="Refonte professionnelle de site web pour les PME suisses. Prix fixe dès CHF 2'900. En ligne en 14 jours ouvrables. Sans tarif horaire, sans coûts cachés.">
+<meta property="og:description" content="Refonte professionnelle de site web pour les PME suisses. Prix fixe dès CHF 1'500. En ligne en 14 jours ouvrables. Sans tarif horaire, sans coûts cachés.">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:site_name" content="Auffrisch">
 <meta property="og:image" content="https://auffrisch.ch/og-image.jpg">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@auffrisch_ch">
 <meta name="twitter:title" content="Refonte de site web Suisse – Webdesign PME prix fixe | auffrisch.ch">
-<meta name="twitter:description" content="Refonte professionnelle de site web pour les PME suisses. Prix fixe dès CHF 2'900. En ligne en 14 jours ouvrables.">
+<meta name="twitter:description" content="Refonte professionnelle de site web pour les PME suisses. Prix fixe dès CHF 1'500. En ligne en 14 jours ouvrables.">
 <meta name="twitter:image" content="https://auffrisch.ch/og-image.jpg">
 
 <script type="application/ld+json">
@@ -37,11 +37,11 @@
   "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "Auffrisch",
   "alternateName": "auffrisch.ch",
-  "description": "Auffrisch est un prestataire suisse spécialisé dans la refonte de sites web et le webdesign professionnel pour les PME. Nous renouvelons les sites web obsolètes à prix fixe dès CHF 2'900 – avec SEO, optimisation mobile et Core Web Vitals. En ligne en 14 jours ouvrables.",
+  "description": "Auffrisch est un prestataire suisse spécialisé dans la refonte de sites web et le webdesign professionnel pour les PME. Nous renouvelons les sites web obsolètes à prix fixe dès CHF 1'500 – avec SEO, optimisation mobile et Core Web Vitals. En ligne en 14 jours ouvrables.",
   "url": "https://auffrisch.ch",
   "email": "web@auffrisch.ch",
   "address": { "@type": "PostalAddress", "addressCountry": "CH", "addressRegion": "Suisse" },
-  "priceRange": "CHF 2900–6900",
+  "priceRange": "CHF 1500–5900",
   "currenciesAccepted": "CHF",
   "areaServed": { "@type": "Country", "name": "Suisse" },
   "availableLanguage": [
@@ -384,6 +384,14 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   .trust-bar-inner { gap: 1.2rem; }
   .process-steps { grid-template-columns: 1fr; }
 }
+
+/* ── FACTSHEET DOWNLOAD BAND ── */
+.factsheet-band { padding: 3rem 4rem; background: var(--cream-warm); border-top: 1px solid rgba(13,31,60,0.06); }
+.factsheet-band .fb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.factsheet-band .fb-text { max-width: 640px; }
+.factsheet-band .fb-h { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 0.4rem 0; }
+.factsheet-band .fb-sub { font-size: 0.95rem; color: var(--text-mid); line-height: 1.6; }
+@media (max-width: 768px) { .factsheet-band { padding: 2.5rem 1.5rem; } .factsheet-band .fb-inner { flex-direction: column; align-items: flex-start; } }
 </style>
 </head>
 <body>
@@ -397,6 +405,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <a href="/technologie.html" onclick="closeMenu()">Technologie</a>
   <a href="#ueber-uns" onclick="closeMenu()">À propos</a>
   <a href="#pakete" onclick="closeMenu()">Forfaits</a>
+  <a href="/Auffrisch_Factsheet.pdf" download onclick="closeMenu()">Factsheet</a>
   <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Contact</a>
   <div class="mobile-lang">
     <a href="/">DE</a>
@@ -414,6 +423,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <a href="/technologie.html">Technologie</a>
     <a href="#ueber-uns">À propos</a>
     <a href="#pakete">Forfaits</a>
+    <a href="/Auffrisch_Factsheet.pdf" download>Factsheet</a>
     <a href="#kontakt" class="nav-cta">Contact</a>
   </div>
   <div class="lang-switcher">
@@ -434,12 +444,12 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 
 <div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
   <h2>Auffrisch – Refonte de site web en Suisse pour les PME à prix fixe</h2>
-  <p>Auffrisch est un prestataire suisse de refonte de sites web et de webdesign professionnel, spécialisé dans les petites et moyennes entreprises (PME) en Suisse. Nous renouvelons les sites web à prix fixe dès CHF 2'900 – sans tarif horaire, sans coûts cachés.</p>
+  <p>Auffrisch est un prestataire suisse de refonte de sites web et de webdesign professionnel, spécialisé dans les petites et moyennes entreprises (PME) en Suisse. Nous renouvelons les sites web à prix fixe dès CHF 1'500 – sans tarif horaire, sans coûts cachés.</p>
   <p>Nos prestations : refonte de site web, nouveau webdesign pour PME, optimisation SEO, optimisation GEO, design Mobile-First, Core Web Vitals, données structurées Schema.org, SEO local et optimisation Google Business.</p>
   <p>Pourquoi Auffrisch ? Parce que nous comprenons les PME suisses. De nombreuses entreprises locales ont des sites web obsolètes qui repoussent les clients potentiels. Auffrisch les rénove – professionnellement, rapidement (14 jours ouvrables) et à un prix transparent et fixe.</p>
-  <p>Tarifs : Starter CHF 2'900 (jusqu'à 5 pages), Complet CHF 4'900 (jusqu'à 8 pages), Présence en ligne CHF 6'900 (visibilité maximale). Tous les forfaits incluent SEO, SSL, Mobile-First, formulaire de contact.</p>
+  <p>Tarifs : Starter CHF 1'500 (jusqu'à 5 pages), Complet CHF 3'500 (jusqu'à 10 pages), Présence en ligne CHF 5'900 (visibilité maximale). Tous les forfaits incluent SEO, SSL, Mobile-First, formulaire de contact.</p>
   <ul>
-    <li>Refonte site web Suisse : Oui, prix fixe dès CHF 2'900</li>
+    <li>Refonte site web Suisse : Oui, prix fixe dès CHF 1'500</li>
     <li>Webdesign PME Suisse : Oui, spécialisé dans les PME suisses</li>
     <li>Site web prix fixe Suisse : Oui, sans tarif horaire</li>
     <li>Site web professionnel Suisse : Oui, avec SEO, GEO, Mobile-First</li>
@@ -461,7 +471,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="hero-checks">
       <div class="hero-check">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Prix fixe dès CHF 2'900
+        Prix fixe dès CHF 1'500
       </div>
       <div class="hero-check">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity="0.15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -717,7 +727,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="pakete-grid">
       <div class="paket reveal" style="transition-delay:0s">
         <div class="paket-name">Starter</div>
-        <div class="paket-price">CHF 2'900<span> / unique</span></div>
+        <div class="paket-price">CHF 1'500<span> / unique</span></div>
         <div class="paket-desc">Pour les indépendants et petites entreprises qui souhaitent être visibles en ligne rapidement et à moindre coût.</div>
         <ul class="paket-features">
           <li><div class="check-icon">✓</div> Une page, moderne &amp; optimisée mobile</li>
@@ -733,10 +743,10 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <div class="paket featured reveal" style="transition-delay:0.15s">
         <div class="featured-tag">Le plus choisi</div>
         <div class="paket-name">Complet</div>
-        <div class="paket-price">CHF 4'900<span> / unique</span></div>
+        <div class="paket-price">CHF 3'500<span> / unique</span></div>
         <div class="paket-desc">Pour les PME qui souhaitent une présence web complète et professionnelle avec plusieurs pages.</div>
         <ul class="paket-features">
-          <li><div class="check-icon">✓</div> Plusieurs pages (jusqu'à 8 pages)</li>
+          <li><div class="check-icon">✓</div> Plusieurs pages (jusqu'à 10 pages)</li>
           <li><div class="check-icon">✓</div> Design individuel avec votre logo &amp; couleurs</li>
           <li><div class="check-icon">✓</div> Optimisation SEO complète</li>
           <li><div class="check-icon">✓</div> Visibilité locale (Google Maps &amp; recherche locale)</li>
@@ -749,7 +759,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       </div>
       <div class="paket reveal" style="transition-delay:0.3s">
         <div class="paket-name">Présence en ligne</div>
-        <div class="paket-price">CHF 6'900<span> / unique</span></div>
+        <div class="paket-price">CHF 5'900<span> / unique</span></div>
         <div class="paket-desc">Site web et réseaux sociaux en une seule main — toute votre présence digitale, cohérente et professionnelle.</div>
         <ul class="paket-features">
           <li><div class="check-icon">✓</div> Tout du forfait Complet</li>
@@ -931,6 +941,21 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 </section>
 
 <!-- CTA -->
+<!-- FACTSHEET DOWNLOAD -->
+<section class="factsheet-band">
+  <div class="fb-inner">
+    <div class="fb-text">
+      <div class="section-label">Factsheet</div>
+      <div class="fb-h">Tout en un coup d'œil.</div>
+      <p class="fb-sub">Forfaits, prestations et prix fixes dans un PDF compact — facile à partager ou imprimer.</p>
+    </div>
+    <a href="/Auffrisch_Factsheet.pdf" class="btn-primary" download>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Télécharger le factsheet
+    </a>
+  </div>
+</section>
+
 <section class="cta-section" id="kontakt">
   <h2>Votre présence.<br><em>Telle qu'elle devrait être.</em></h2>
   <p>Un court entretien par vidéoconférence — gratuit et sans engagement. Nous écoutons ce qui vous tient à cœur.</p>
@@ -955,9 +980,9 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       </div>
       <select name="paket">
         <option value="" disabled selected>Quel forfait vous intéresse ?</option>
-        <option value="starter">Starter — CHF 2'900</option>
-        <option value="komplett">Complet — CHF 4'900 (recommandé)</option>
-        <option value="praesenz">Présence en ligne — CHF 6'900</option>
+        <option value="starter">Starter — CHF 1'500</option>
+        <option value="komplett">Complet — CHF 3'500 (recommandé)</option>
+        <option value="praesenz">Présence en ligne — CHF 5'900</option>
         <option value="wartung">Maintenance uniquement — CHF 990/an</option>
         <option value="unbekannt">Je ne sais pas encore</option>
       </select>
@@ -985,6 +1010,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="footer-col">
       <h4>Navigation</h4>
       <div class="footer-links">
+        <a href="/Auffrisch_Factsheet.pdf" download>Factsheet (PDF)</a>
         <a href="#problem">Le problème</a>
         <a href="#prozess">Démarche</a>
         <a href="#pakete">Tarifs</a>

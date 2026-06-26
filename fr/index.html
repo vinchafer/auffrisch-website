@@ -117,9 +117,6 @@ section { padding: 6rem 4rem; }
 .btn-accent:hover { transform: translateY(-2px); background: var(--accent-dark); }
 .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy); padding: 1rem 1.5rem; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: gap 0.2s; background: none; border: none; cursor: pointer; font-family: inherit; }
 .btn-ghost:hover { gap: 0.8rem; }
-.cursor, .cursor-follower { pointer-events: none; position: fixed; z-index: 9999; top: 0; left: 0; }
-.cursor { width: 12px; height: 12px; background: var(--navy); border-radius: 50%; transform: translate(-50%, -50%); transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s; }
-.cursor-follower { width: 36px; height: 36px; border: 1.5px solid var(--navy); border-radius: 50%; transform: translate(-50%, -50%); transition: left 0.12s ease, top 0.12s ease, width 0.3s, height 0.3s, border-color 0.3s; opacity: 0.5; z-index: 9998; }
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; transition: background 0.4s, padding 0.4s, box-shadow 0.4s; }
 nav.scrolled { background: rgba(248,245,240,0.96); backdrop-filter: blur(12px); padding: 1rem 4rem; box-shadow: 0 1px 0 var(--border); }
 .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; text-decoration: none; }
@@ -374,7 +371,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   .footer-main { grid-template-columns: 1fr; gap: 2rem; }
   footer { padding: 2rem 1.5rem 5rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .cursor, .cursor-follower { display: none; }
   .sticky-cta { display: block; }
   .wartung-strip { flex-direction: column; text-align: center; }
 }
@@ -396,8 +392,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="follower"></div>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -405,7 +399,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <a href="/technologie.html" onclick="closeMenu()">Technologie</a>
   <a href="#ueber-uns" onclick="closeMenu()">À propos</a>
   <a href="#pakete" onclick="closeMenu()">Forfaits</a>
-  <a href="/Auffrisch_Factsheet.pdf" download onclick="closeMenu()">Factsheet</a>
+  <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener" onclick="closeMenu()">Factsheet</a>
   <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Contact</a>
   <div class="mobile-lang">
     <a href="/">DE</a>
@@ -423,7 +417,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <a href="/technologie.html">Technologie</a>
     <a href="#ueber-uns">À propos</a>
     <a href="#pakete">Forfaits</a>
-    <a href="/Auffrisch_Factsheet.pdf" download>Factsheet</a>
+    <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener">Factsheet</a>
     <a href="#kontakt" class="nav-cta">Contact</a>
   </div>
   <div class="lang-switcher">
@@ -949,7 +943,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <div class="fb-h">Tout en un coup d'œil.</div>
       <p class="fb-sub">Forfaits, prestations et prix fixes dans un PDF compact — facile à partager ou imprimer.</p>
     </div>
-    <a href="/Auffrisch_Factsheet.pdf" class="btn-primary" download>
+    <a href="/Auffrisch_Factsheet.pdf" class="btn-primary" download target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Télécharger le factsheet
     </a>
@@ -1010,7 +1004,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="footer-col">
       <h4>Navigation</h4>
       <div class="footer-links">
-        <a href="/Auffrisch_Factsheet.pdf" download>Factsheet (PDF)</a>
+        <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener">Factsheet (PDF)</a>
         <a href="#problem">Le problème</a>
         <a href="#prozess">Démarche</a>
         <a href="#pakete">Tarifs</a>
@@ -1038,26 +1032,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 </div>
 
 <script>
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('follower');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  follower.style.left = e.clientX + 'px';
-  follower.style.top = e.clientY + 'px';
-});
-document.querySelectorAll('a, button, .paket, .step, .problem-card, .faq-q, .markt-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-    cursor.style.background = 'var(--accent)';
-    follower.style.borderColor = 'var(--accent)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    cursor.style.background = 'var(--navy)';
-    follower.style.borderColor = 'var(--navy)';
-  });
-});
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 50);

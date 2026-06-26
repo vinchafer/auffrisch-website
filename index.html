@@ -296,20 +296,6 @@ section { padding: 6rem 4rem; }
 .btn-ghost:hover { gap: 0.8rem; }
 
 /* ── CURSOR (Desktop only) ── */
-.cursor, .cursor-follower { pointer-events: none; position: fixed; z-index: 9999; top: 0; left: 0; }
-.cursor {
-  width: 12px; height: 12px;
-  background: var(--navy); border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
-}
-.cursor-follower {
-  width: 36px; height: 36px;
-  border: 1.5px solid var(--navy); border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: left 0.12s ease, top 0.12s ease, width 0.3s, height 0.3s, border-color 0.3s;
-  opacity: 0.5; z-index: 9998;
-}
 
 /* ── NAV ── */
 nav {
@@ -986,7 +972,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   .footer-main { grid-template-columns: 1fr; gap: 2rem; }
   footer { padding: 2rem 1.5rem 5rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .cursor, .cursor-follower { display: none; }
   .sticky-cta { display: block; }
   .wartung-strip { flex-direction: column; text-align: center; }
 }
@@ -1008,8 +993,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="follower"></div>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -1017,7 +1000,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
   <a href="technologie.html" onclick="closeMenu()">Technologie</a>
   <a href="#ueber-uns" onclick="closeMenu()">Über uns</a>
   <a href="#pakete" onclick="closeMenu()">Pakete</a>
-  <a href="/Auffrisch_Factsheet.pdf" download onclick="closeMenu()">Factsheet</a>
+  <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener" onclick="closeMenu()">Factsheet</a>
   <a href="#kontakt" class="btn-accent menu-cta" onclick="closeMenu()">Kontakt</a>
   <div class="mobile-lang">
     <a href="/" class="lang-active">DE</a>
@@ -1035,7 +1018,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <a href="technologie.html">Technologie</a>
     <a href="#ueber-uns">Über uns</a>
     <a href="#pakete">Pakete</a>
-    <a href="/Auffrisch_Factsheet.pdf" download>Factsheet</a>
+    <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener">Factsheet</a>
     <a href="#kontakt" class="nav-cta">Kontakt</a>
   </div>
   <div class="lang-switcher">
@@ -1601,7 +1584,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
       <div class="fb-h">Alles auf einen Blick.</div>
       <p class="fb-sub">Pakete, Leistungen und Fixpreise kompakt als PDF — ideal zum Teilen oder Ausdrucken.</p>
     </div>
-    <a href="/Auffrisch_Factsheet.pdf" class="btn-primary" download>
+    <a href="/Auffrisch_Factsheet.pdf" class="btn-primary" download target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Factsheet herunterladen
     </a>
@@ -1668,7 +1651,7 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     <div class="footer-col">
       <h4>Navigation</h4>
       <div class="footer-links">
-        <a href="/Auffrisch_Factsheet.pdf" download>Factsheet (PDF)</a>
+        <a href="/Auffrisch_Factsheet.pdf" download target="_blank" rel="noopener">Factsheet (PDF)</a>
         <a href="#problem">Das Problem</a>
         <a href="#prozess">Vorgehen</a>
         <a href="#pakete">Preise</a>
@@ -1696,27 +1679,6 @@ footer .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
 </div>
 
 <script>
-// ── CURSOR ──
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('follower');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  follower.style.left = e.clientX + 'px';
-  follower.style.top = e.clientY + 'px';
-});
-document.querySelectorAll('a, button, .paket, .step, .problem-card, .faq-q, .markt-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-    cursor.style.background = 'var(--accent)';
-    follower.style.borderColor = 'var(--accent)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    cursor.style.background = 'var(--navy)';
-    follower.style.borderColor = 'var(--navy)';
-  });
-});
 
 // ── NAV ──
 const nav = document.getElementById('nav');
